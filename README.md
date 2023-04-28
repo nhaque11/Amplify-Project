@@ -8,7 +8,16 @@
 ## Project Description
  - For our group project, we have decided to develop a text/terminal based game that supports about 2-3 minigames for users to choose between. The games will include a guess the word option that requests users to have "x" amount of lives to guess the word displayed with a hint provided, a math game restricted to a set range of numbers (randomly generated) which allows users to choose between various modes that is (maybe timed) and keeps tab of score (highest score too) plus other pending features (start button), and if time allows, another minigame (pending idea). 
  - The project is interesting to us because each one of us has played mini-games and apps on our phones that have at some point improved our critical thinking skills and our project will be the perfect opportunity to help people to practice and have fun while learning for an individual or even as a group. 
+
+ > ### Tech Stack
  - C++ (as of right now)
+ - Visual Studio Code
+ - Git/Github
+ - Valgrind
+ - Google Test Framework
+ - Lucidchart
+
+> ### Input/Output
  - Input: What the user is asked to input when choosing their profile settings, game choice, and game modes (if applicable), and gameplay
  - Output: Profile output, user gameplay (depending on which game), current/final scores, other pending features. 
  
