@@ -1,6 +1,6 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-718a45dd9cf7e7f842a935f5ebbe5719a5e09af4491e668f4dbf3b35d5cca122.svg)](https://classroom.github.com/online_ide?assignment_repo_id=10940225&assignment_repo_type=AssignmentRepo)
 
-# Brain Teasers
+# Amplify
 
  ### Authors: 
  [Naquib Haque](https://github.com/nhaqu008), [Jarod Hendrickson](https://github.com/jhend023), [Jason Chau](https://github.com/jchau044), [Alex Ha](https://github.com/aha053)
@@ -34,14 +34,19 @@
  >   * The second check-in should be scheduled with a reader. During that meeting you will discuss:
  >     * The tasks you are planning for the first sprint
  >     * How work will be divided between the team members
-## User Interface Specification
- > Include a navigation diagram for your screens and the layout of each of those screens as desribed below. For all the layouts/diagrams, you can use any tool such as PowerPoint or a drawing program. (Specification requirement is adapted from [this template](https://redirect.cs.umbc.edu/~mgrass2/cmsc345/Template_UI.doc))
 
+## User Interface Specification
+ 
 ### Navigation Diagram
-> Draw a diagram illustrating how the user can navigate from one screen to another. Here is an [example](https://creately.com/diagram/example/ikfqudv82/user-navigation-diagram-classic?r=v). It can be useful to label each symbol that represents a screen so that you can reference the screens in the next section or the rest of the document if necessary. Give a brief description of what the diagram represents.
+![CS 100 - Final Project Nav Diagram](https://user-images.githubusercontent.com/99585088/236991915-a68dfd80-3e6c-4403-952f-a6c3edc0ded8.png)
+
 
 ### Screen Layouts
-> Include the layout of each of your screens. The layout should describe the screen’s major components such as menus and prompts for user inputs, expected output, and buttons (if applicable). Explain what is on the layout, and the purpose of each menu item, button, etc. If many screens share the same layout, start by describing the general layout and then list the screens that will be using that layout and the differences between each of them.
+![CS 100 - Final Project Screen Layouts_Nav Diagram](https://user-images.githubusercontent.com/99585088/236992027-c2d7d61e-9196-4c60-b61b-a72e28ec1e04.png)
+![CS 100 - Final Project Screen Layouts_Nav Diagram (1)](https://user-images.githubusercontent.com/99585088/236992069-ab7a18c2-f0bc-4d93-933b-f32a55e6efb6.png)
+![CS 100 - Final Project Screen Layouts_Nav Diagram (2)](https://user-images.githubusercontent.com/99585088/236992109-ea438474-a5bc-4c67-b0e8-2c707502b4cb.png)
+![CS 100 - Final Project Screen Layouts_Nav Diagram (3)](https://user-images.githubusercontent.com/99585088/236992150-6c4a93c5-613a-4b4d-be11-3d5585940b8b.png)
+
 
 ## Class Diagram
 The class diagram is centered around our game object. The three games (Wordle, Hang Man, and Math Quiz) will be derived from this game object and the menu will be projected from one main.cpp. The games are derived from the game object because all the games have a name and will have a saved high score. Each game derived class has its own set of private variables and functions necessary to develop the game without needing to develop the other games simultaneously. All .cpp and .h files will be compilled through a CMakeLists.txt and be run by one single executable, through the console (all games are terminal based).
