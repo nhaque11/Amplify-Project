@@ -33,7 +33,7 @@
 ### Screen Layouts
 ![CS 100 - Final Project Screen Layouts_Nav Diagram](https://user-images.githubusercontent.com/99585088/236992027-c2d7d61e-9196-4c60-b61b-a72e28ec1e04.png)
 ![CS 100 - Final Project Screen Layouts_Nav Diagram (1)](https://user-images.githubusercontent.com/99585088/236992069-ab7a18c2-f0bc-4d93-933b-f32a55e6efb6.png)
-![CS 100 - Final Project Screen Layouts_Nav Diagram (2)](https://user-images.githubusercontent.com/99585088/236992109-ea438474-a5bc-4c67-b0e8-2c707502b4cb.png)
+![CS 100 - Final Project Screen Layouts_Nav Diagram (4)](https://github.com/cs100/final-project-nhaqu008-jhend023-jchau044-aha053/assets/99585088/e4d0ba4b-bbe3-4020-a880-12fffb3778f0)
 ![CS 100 - Final Project Screen Layouts_Nav Diagram (3)](https://user-images.githubusercontent.com/99585088/236992150-6c4a93c5-613a-4b4d-be11-3d5585940b8b.png)
 
 
