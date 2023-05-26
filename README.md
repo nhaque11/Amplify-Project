@@ -39,8 +39,7 @@
 
 ## Class Diagram
 The class diagram is centered around our game object. The three games (Wordle, Hang Man, and Math Quiz) will be derived from this game object and the menu will be projected from one main.cpp. The games are derived from the game object because all the games have a name and will have a saved high score. Each game derived class has its own set of private variables and functions necessary to develop the game without needing to develop the other games simultaneously. All .cpp and .h files will be compilled through a CMakeLists.txt and be run by one single executable, through the console (all games are terminal based).
-![UML Class Diagram CS 100](https://user-images.githubusercontent.com/102707406/236993478-f6f3112c-4710-4684-bafb-2e4476b82ba6.png)
-
+![UML Class Diagram CS 100](https://github.com/cs100/final-project-nhaqu008-jhend023-jchau044-aha053/assets/102707406/2db11070-759b-45e9-8a5c-816bc21d96a6.png)
 
 
  > ## Phase III
