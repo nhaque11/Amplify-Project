@@ -1,3 +1,9 @@
+#include <bits\stdc++.h>
+#include <windows.h>
+#include __MATHQUIZ_H__
+
+using namespace std;
+
 void MathQuizGame::mediumMode()
 {
         int answer[10] = {540, 3649, 132, 3015, 1176, 3960, 656, 6534, 1350, 3354};
