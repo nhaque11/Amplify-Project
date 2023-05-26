@@ -7,11 +7,11 @@
 
 ## Project Description
  - The project is interesting to us because each one of us has played mini-games and apps on our phones that have at some point improved our critical thinking skills and our project will be the perfect opportunity to help people to practice and have fun while learning for an individual or even as a group. 
- 
-  ### Features    
+
+### Features    
   - For our group project, we have decided to develop a text/terminal based game that supports about 2-3 minigames for users to choose between. The games will include a guess the word option that requests users to have "x" amount of lives to guess the word displayed with a hint provided, a math game restricted to a set range of numbers (randomly generated) which allows users to choose between various modes that is (maybe timed) and keeps tab of score (highest score too) plus other pending features (start button), and if time allows, another minigame (pending idea). 
 
-  ### Tech Stack
+### Tech Stack
  - C++ (as of right now)
  - Visual Studio Code
  - Git/Github
@@ -34,11 +34,9 @@
  >   * The second check-in should be scheduled with a reader. During that meeting you will discuss:
  >     * The tasks you are planning for the first sprint
  >     * How work will be divided between the team members
-## User Interface Specification
- > Include a navigation diagram for your screens and the layout of each of those screens as desribed below. For all the layouts/diagrams, you can use any tool such as PowerPoint or a drawing program. (Specification requirement is adapted from [this template](https://redirect.cs.umbc.edu/~mgrass2/cmsc345/Template_UI.doc))
 
 ### Navigation Diagram
-> Draw a diagram illustrating how the user can navigate from one screen to another. Here is an [example](https://creately.com/diagram/example/ikfqudv82/user-navigation-diagram-classic?r=v). It can be useful to label each symbol that represents a screen so that you can reference the screens in the next section or the rest of the document if necessary. Give a brief description of what the diagram represents.
+![nav_diagram](./img/CS 100 - Final Project Nav Diagram.png)
 
 ### Screen Layouts
 > Include the layout of each of your screens. The layout should describe the screen’s major components such as menus and prompts for user inputs, expected output, and buttons (if applicable). Explain what is on the layout, and the purpose of each menu item, button, etc. If many screens share the same layout, start by describing the general layout and then list the screens that will be using that layout and the differences between each of them.
