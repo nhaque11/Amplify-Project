@@ -40,7 +40,7 @@
 ## Class Diagram
 The class diagram is centered around our game object. The three games (Wordle, Hang Man, and Math Quiz) will be derived from this game object and the menu will be projected from one main.cpp. The games are derived from the game object because all the games have a name and will have a saved high score. Each game derived class has its own set of private variables and functions necessary to develop the game without needing to develop the other games simultaneously. All .cpp and .h files will be compilled through a CMakeLists.txt and be run by one single executable, through the console (all games are terminal based).
 ![UML Class Diagram CS 100](https://github.com/cs100/final-project-nhaqu008-jhend023-jchau044-aha053/assets/102707406/2db11070-759b-45e9-8a5c-816bc21d96a6.png)
-
+This UML diagram follows the open/closed principle and single responsibility principles. The open/closed principle is followed as all mini-games of the amplify project inherit from the Game object and any additional games can be made without changing the Game object file. The single responsibility principel is applied to the Wordle game as the many functions are split into two smaller classes each with their own responsibility. This change helped to make the code more manageable and more approachable as you know which functions will need to be done in order to complete an entire feature rather than completing the entire game itself. 
 
  > ## Phase III
  > You will need to schedule a check-in for the second scrum meeting with the same reader you had your first scrum meeting with (using Calendly). Your entire team must be present. This meeting will occur on week 8 during lab time.
