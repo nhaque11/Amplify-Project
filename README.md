@@ -9,7 +9,7 @@
  - The project is interesting to us because each one of us has played mini-games and apps on our phones that have at some point improved our critical thinking skills and our project will be the perfect opportunity to help people to practice and have fun while learning for an individual or even as a group. 
  
   ### Features    
-  - For our group project, we have decided to develop a text/terminal based game that supports about 2-3 minigames for users to choose between. The games will include a guess the word option (ie wordle) that asks the user to guess the word within 6 tries and with proper (green, yellow, grey coloring) , a math game restricted to a set range of numbers (randomly generated) which allows users to choose between various modes that is (maybe timed) and keeps tab of score (highest score too) plus other pending features (start button), and if time allows, another minigame (pending idea). 
+  - For our group project, we have decided to develop a text/terminal based game that supports about 2-3 minigames for users to choose between. The games will include a guess the word option (ie wordle) that asks the user to guess the word within 6 tries and with proper (green, yellow, grey coloring) , a math game restricted to a set range of numbers (randomly generated) which allows users to choose between various modes that is (maybe timed) and keeps tab of score (highest score too) plus other pending features (start button), and lastly a game of Hangman.
 
   ### Tech Stack
  - C++ (as of right now)
@@ -27,7 +27,9 @@
 ## User Interface Specification
  
 ### Navigation Diagram
-![CS 100 - Final Project Nav Diagram](https://user-images.githubusercontent.com/99585088/236991915-a68dfd80-3e6c-4403-952f-a6c3edc0ded8.png)
+![CS 100 - Final Project Nav  Diagram](https://github.com/cs100/final-project-nhaqu008-jhend023-jchau044-aha053/assets/99585088/885b8321-4082-407a-ad8d-6019a59be9bb)
+
+This navigation diagram allows the user to understand where the program begins and the process that leads to the end. The user starts with the main menu screen where they are able to choose between four options, three leading to a game, while the last terminates the program. The user then is prompted to the chosen options screen which then leads to the gameplay of that option and eventually the user is given the option to exit the game and enter the main menu screen once again. 
 
 
 ### Screen Layouts
@@ -39,29 +41,9 @@
 
 ## Class Diagram
 The class diagram is centered around our game object. The three games (Wordle, Hang Man, and Math Quiz) will be derived from this game object and the menu will be projected from one main.cpp. The games are derived from the game object because all the games have a name and will have a saved high score. Each game derived class has its own set of private variables and functions necessary to develop the game without needing to develop the other games simultaneously. All .cpp and .h files will be compilled through a CMakeLists.txt and be run by one single executable, through the console (all games are terminal based).
-![UML Class Diagram CS 100](https://user-images.githubusercontent.com/102707406/236993478-f6f3112c-4710-4684-bafb-2e4476b82ba6.png)
+![UML Class Diagram CS 100](https://github.com/cs100/final-project-nhaqu008-jhend023-jchau044-aha053/assets/102707406/2db11070-759b-45e9-8a5c-816bc21d96a6.png)
+This UML diagram follows the open/closed principle and single responsibility principles. The open/closed principle is followed as all mini-games of the amplify project inherit from the Game object and any additional games can be made without changing the Game object file. The single responsibility principel is applied to the Wordle game as the many functions are split into two smaller classes each with their own responsibility. This change helped to make the code more manageable and more approachable as you know which functions will need to be done in order to complete an entire feature rather than completing the entire game itself. 
 
-
-
- > ## Phase III
- > You will need to schedule a check-in for the second scrum meeting with the same reader you had your first scrum meeting with (using Calendly). Your entire team must be present. This meeting will occur on week 8 during lab time.
- 
- > BEFORE the meeting you should do the following:
- > * Update your class diagram from Phase II to include any feedback you received from your TA/grader.
- > * Considering the SOLID design principles, reflect back on your class diagram and think about how you can use the SOLID principles to improve your design. You should then update the README.md file by adding the following:
- >   * A new class diagram incorporating your changes after considering the SOLID principles.
- >   * For each update in your class diagram, you must explain in 3-4 sentences:
- >     * What SOLID principle(s) did you apply?
- >     * How did you apply it? i.e. describe the change.
- >     * How did this change help you write better code?
- > * Perform a new sprint plan like you did in Phase II.
- > * You should also make sure that your README file (and Project board) are up-to-date reflecting the current status of your project and the most recent class diagram. Previous versions of the README file should still be visible through your commit history.
- 
-> During the meeting with your reader you will discuss: 
- > * How effective your last sprint was (each member should talk about what they did)
- > * Any tasks that did not get completed last sprint, and how you took them into consideration for this sprint
- > * Any bugs you've identified and created issues for during the sprint. Do you plan on fixing them in the next sprint or are they lower priority?
- > * What tasks you are planning for this next sprint.
 
  
  > ## Final deliverable
