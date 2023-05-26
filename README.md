@@ -7,11 +7,11 @@
 
 ## Project Description
  - The project is interesting to us because each one of us has played mini-games and apps on our phones that have at some point improved our critical thinking skills and our project will be the perfect opportunity to help people to practice and have fun while learning for an individual or even as a group. 
+ 
+  ### Features    
+  - For our group project, we have decided to develop a text/terminal based game that supports about 2-3 minigames for users to choose between. The games will include a guess the word option (ie wordle) that asks the user to guess the word within 6 tries and with proper (green, yellow, grey coloring) , a math game restricted to a set range of numbers (randomly generated) which allows users to choose between various modes that is (maybe timed) and keeps tab of score (highest score too) plus other pending features (start button), and if time allows, another minigame (pending idea). 
 
-### Features    
-  - For our group project, we have decided to develop a text/terminal based game that supports about 2-3 minigames for users to choose between. The games will include a guess the word option that requests users to have "x" amount of lives to guess the word displayed with a hint provided, a math game restricted to a set range of numbers (randomly generated) which allows users to choose between various modes that is (maybe timed) and keeps tab of score (highest score too) plus other pending features (start button), and if time allows, another minigame (pending idea). 
-
-### Tech Stack
+  ### Tech Stack
  - C++ (as of right now)
  - Visual Studio Code
  - Git/Github
@@ -23,27 +23,26 @@
  - Input: What the user is asked to input when choosing their profile settings, game choice, and game modes (if applicable), and gameplay
  - Output: Profile output, user gameplay (depending on which game), current/final scores, other pending features. 
  
- > ## Phase II
- > In addition to completing the "User Interface Specification" and "Class Diagram" sections below, you will need to:
- > * Create an "Epic" (note) for each feature. Place these epics in the `Product Backlog` column
- > * Complete your first *sprint planning* meeting to plan out the next 7 days of work.
- >   * Break down the "Epics" into smaller actionable user stories (i.e. smaller development tasks). Convert them into issues and assign them to team members. Place these in the `TODO` column.
- >   * These cards should represent roughly 7 days worth of development time for your team. Then, once the sprint is over you should be repeating these steps to plan a new sprint, taking you until your second scrum meeting with the reader in phase III.
- > * Schedule two check-ins using Calendly. You need to pick both time slots during your lab on week 6. Your entire team must be present for both check-ins.
- >   * The first check-in needs to be scheduled with your lab TA. During that meeting, you will discuss your project design/class diagram from phase II.
- >   * The second check-in should be scheduled with a reader. During that meeting you will discuss:
- >     * The tasks you are planning for the first sprint
- >     * How work will be divided between the team members
 
+## User Interface Specification
+ 
 ### Navigation Diagram
-![nav_diagram](./img/CS 100 - Final Project Nav Diagram.png)
+![CS 100 - Final Project Nav Diagram](https://user-images.githubusercontent.com/99585088/236991915-a68dfd80-3e6c-4403-952f-a6c3edc0ded8.png)
+
 
 ### Screen Layouts
-> Include the layout of each of your screens. The layout should describe the screen’s major components such as menus and prompts for user inputs, expected output, and buttons (if applicable). Explain what is on the layout, and the purpose of each menu item, button, etc. If many screens share the same layout, start by describing the general layout and then list the screens that will be using that layout and the differences between each of them.
+![CS 100 - Final Project Screen Layouts_Nav Diagram](https://user-images.githubusercontent.com/99585088/236992027-c2d7d61e-9196-4c60-b61b-a72e28ec1e04.png)
+![CS 100 - Final Project Screen Layouts_Nav Diagram (1)](https://user-images.githubusercontent.com/99585088/236992069-ab7a18c2-f0bc-4d93-933b-f32a55e6efb6.png)
+![CS 100 - Final Project Screen Layouts_Nav Diagram (4)](https://github.com/cs100/final-project-nhaqu008-jhend023-jchau044-aha053/assets/99585088/e4d0ba4b-bbe3-4020-a880-12fffb3778f0)
+![CS 100 - Final Project Screen Layouts_Nav Diagram (3)](https://user-images.githubusercontent.com/99585088/236992150-6c4a93c5-613a-4b4d-be11-3d5585940b8b.png)
+
 
 ## Class Diagram
- > Include a **class diagram(s)** for your project and a **description** of the diagram(s). Your class diagram(s) should include all the main classes you plan for the project. This should be in sufficient detail that another group could pick up the project this point and successfully complete it. Use proper UML notation (as discussed in the course slides).
- 
+The class diagram is centered around our game object. The three games (Wordle, Hang Man, and Math Quiz) will be derived from this game object and the menu will be projected from one main.cpp. The games are derived from the game object because all the games have a name and will have a saved high score. Each game derived class has its own set of private variables and functions necessary to develop the game without needing to develop the other games simultaneously. All .cpp and .h files will be compilled through a CMakeLists.txt and be run by one single executable, through the console (all games are terminal based).
+![UML Class Diagram CS 100](https://user-images.githubusercontent.com/102707406/236993478-f6f3112c-4710-4684-bafb-2e4476b82ba6.png)
+
+
+
  > ## Phase III
  > You will need to schedule a check-in for the second scrum meeting with the same reader you had your first scrum meeting with (using Calendly). Your entire team must be present. This meeting will occur on week 8 during lab time.
  
@@ -78,4 +77,5 @@
  > Instructions on installing and running your application
  ## Testing
  > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
+ 
  
