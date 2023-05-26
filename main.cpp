@@ -4,6 +4,7 @@
 #include "Wordle.h"
 #include "Hangman.h"
 #include "MQuiz.h"
+#include "Game.h"
 
 using namespace std;
 
@@ -11,14 +12,14 @@ void displayMenu();
 
 void displayMenu() {
     while (validChoice == false) {
-        cout << "Game choices: " << endl;
+        cout << "Game Choices: " << endl;
         cout << endl;
         cout << "1. Wordle" << endl;
         cout << "2. Math Quiz" << endl;
         cout << "3. Hangman" << endl;
         cout << "4. Quit" << endl;
         cout << endl
-        cout << "Select an option by entering the respective number of the game" << endl;
+        cout << "Select an option by entering the respective number of the game: " << endl;
         cin >> userChoice;
 
         if (userChoice == "1") {
@@ -39,6 +40,7 @@ void displayMenu() {
         }
         else {
             cout << "Invalid option. Try again." << endl;
+            displayMenu();
         }
     }
 }
