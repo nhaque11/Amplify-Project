@@ -26,13 +26,15 @@ int main() {
     cin >> userChoice;
 
     if (userChoice == "Wordle") {
-        
+        system("clear);
         play(Wordle);
     }
     else if (userChoice == "Math Quiz") {
+        system("clear);
         play(MathQuiz);
     }
     else if (userChoice == "Hangman") {
+        system("clear);
         play(Hangman);
     }
     else if (userChoice == "Quiz") {
