@@ -4,7 +4,7 @@
 
 #include "Wordle.h"
 #include "Hangman.h"
-#include "MQuiz.h"
+#include "MathQuiz.h"
 #include "Game.h"
 
 using namespace std;
