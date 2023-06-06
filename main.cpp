@@ -35,7 +35,7 @@ int main() {
     else if (userChoice == "Hangman") {
         play(Hangman);
     }
-    else if (userChoice == "Quiz") {
+    else if (userChoice == "Quit") {
         exit(1);
     }
 }
