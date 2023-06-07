@@ -49,17 +49,21 @@ level:
         break;
     }
     cout << endl;
-    cout << "Would you like to play again?\nType y for yes and n for no." << endl;
 
-    cin >> ch;
-     if (ch == 'y' || ch == 'Y')
-        {
-            goto level;
+    do {
+        cout << endl;
+        cout << "Would you like to play again?\nType y for yes and n for no." << endl;
+
+        cin >> ch;
+        if (ch == 'y' || ch == 'Y') {
+            // Perform any necessary tasks before starting the game again
+        } else {
+            // Clear the screen by printing newlines
+            for (int i = 0; i < 100; i++) {
+                cout << endl;
+            }
         }
-    else
-        {
-            system("cls");        //should be updated somehow to send user to title main menu screen! 
-        }
+    } while (ch == 'y' || ch == 'Y');
 }
 
 void MathQuizGame::easyMode()
