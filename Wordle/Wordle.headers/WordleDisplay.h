@@ -1,6 +1,7 @@
 #ifndef __WORDLEDISPLAY_H__
 #define __WORDLEDISPLAY_H__
 
+#include <vector>
 #include <iostream>
 using namespace std;
 
