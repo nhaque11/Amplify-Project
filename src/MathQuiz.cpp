@@ -4,7 +4,7 @@
 #include <string>
 #include <stdlib.h>
 
-#include __MATHQUIZ_H__
+#include "../header/MathQuiz.h"
 
 using namespace std;
 
@@ -24,7 +24,7 @@ void MathQuizGame::startGame()
 level:
     cout << "---------------------- Welcome To Math Quiz! ----------------------" << endl;
     cout << "Choose game mode" << endl;
-    cout << "1) Easy \n 2) Medium \n 3) Hard" << endl;
+    cout << " 1) Easy \n 2) Medium \n 3) Hard" << endl;
     cin >> mode;
     switch (mode)
     {
@@ -49,26 +49,60 @@ level:
         break;
     }
     cout << endl;
-    cout << "Would you like to play again?\nType y for yes and n for no." << endl;
 
-    cin >> ch
-     if (ch == 'y' || ch == 'Y')
-        {
-            goto level;
+    do {
+        cout << endl;
+        cout << "Would you like to play again?\nType y for yes and n for no." << endl;
+
+        cin >> ch;
+        if (ch == 'y' || ch == 'Y') {
+            // Perform any necessary tasks before starting the game again
+        } else {
+            // Clear the screen by printing newlines
+            for (int i = 0; i < 100; i++) {
+                cout << endl;
+            }
         }
-    else
-        {
-            system("cls");        //should be updated somehow to send user to title main menu screen! 
-        }
+    } while (ch == 'y' || ch == 'Y');
 }
 
 void MathQuizGame::easyMode()
 {
-    int ans[8];
-    string question[8];
-    int answer[8] = {20, 12, 6, 14, 5, 1, ,2, 5};
-    question[8] = {"Question 1) 5x4=___?", "Question 2) 6x2=___?", "Question 3) What is 3+3?", "Question 4) What is 6+8?", "Question 5) What is 9-4?", 
-                    "Question 6) 3-2=___?", "Question 7) What is 6/3?", "Question 8) What is 10/2?"};
+  int ans[8];
+  string question[8];
+  int answer[8] = {20, 12, 6, 14, 5, 1, 2, 5};
+
+// Assign values to the question array using a loop
+    for (int i = 0; i < 8; i++) 
+    {
+        switch (i) 
+        {
+            case 0:
+                question[i] = "Question 1) 5x4=___?";
+                break;
+            case 1:
+                question[i] = "Question 2) 6x2=___?";
+                break;
+            case 2:
+                question[i] = "Question 3) What is 3+3?";
+                break;
+            case 3:
+                question[i] = "Question 4) What is 6+8?";
+                break;
+            case 4:
+                question[i] = "Question 5) What is 9-4?";
+                break;
+            case 5:
+                question[i] = "Question 6) 3-2=___?";
+                break;
+            case 6:
+                question[i] = "Question 7) What is 6/3?";
+                break;
+            case 7:
+                question[i] = "Question 8) What is 10/2?";
+                break;
+        }
+    }
 
     ansCount = 0;
     correctAnswer = 0;
@@ -101,23 +135,23 @@ retry:
     if (correctAnswer >= 5)
     {
         string userName;
-        cout << "Enter your name."
+        cout << "Enter your name.";
         cin >> userName;
         cout << "Congratulations " << userName << "!" << " You passed easy mode." << endl;
         cout << "Total number of questions given: 8." << endl;
-        cout << userName << " answered " << correctAns << " problems correctly!" << endl;
-        cout << userName << " gave " << (8 - correctAns - skipCount) << " wrong answers." << endl;
+        cout << userName << " answered " << correctAnswer << " problems correctly!" << endl;
+        cout << userName << " gave " << (8 - correctAnswer - skipCount) << " wrong answers." << endl;
         cout << userName << " skipped " << skipCount << " questions." << endl;
     }
     else 
     {
         string userName;
-        cout << "Enter your name."
+        cout << "Enter your name.";
         cin >> userName;
         cout << "You did not pass easy mode " << userName << "!" << " Try again." << endl;
         cout << "Total number of questions given: 8." << endl;
-        cout << userName << " answered " << correctAns << " problems correctly!" << endl;
-        cout << userName << " gave " << (8 - correctAns - skipCount) << " wrong answers." << endl;
+        cout << userName << " answered " << correctAnswer << " problems correctly!" << endl;
+        cout << userName << " gave " << (8 - correctAnswer - skipCount) << " wrong answers." << endl;
         cout << userName << " skipped " << skipCount << " questions." << endl;
 
         goto retry;
@@ -190,7 +224,7 @@ void MathQuizGame::mediumMode()
                 {
                         cout << "Nice try, but you're not quite a math genius. Care to give it another shot?" << endl;
                         cout << "Total questions -> 10" << endl;
-                        cout << "You got " correctAnswer << " correct." << endl;
+                        cout << "You got " << correctAnswer << " correct." << endl;
                         cout << "You missed " << (10 - correctAnswer - skipCount) << "questions." << endl;
                         cout << "You skipped " << skipCount << " questions." << endl;
                         goto playAgain;
@@ -263,7 +297,7 @@ void MathQuizGame::hardMode()
                 {
                         cout << "Nice try, but you're not quite a math genius. Care to give it another shot?" << endl;
                         cout << "Total questions -> 10" << endl;
-                        cout << "You got " correctAnswer << " correct." << endl;
+                        cout << "You got " << correctAnswer << " correct." << endl;
                         cout << "You missed " << (10 - correctAnswer - skipCount) << "questions." << endl;
                         cout << "You skipped " << skipCount << " questions." << endl;
                         goto playAgain;
