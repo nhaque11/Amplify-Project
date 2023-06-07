@@ -4,7 +4,7 @@
 #include <string>
 #include <stdlib.h>
 
-#include __MATHQUIZ_H__
+#include "MathQuiz.h"
 
 using namespace std;
 
@@ -105,8 +105,8 @@ retry:
         cin >> userName;
         cout << "Congratulations " << userName << "!" << " You passed easy mode." << endl;
         cout << "Total number of questions given: 8." << endl;
-        cout << userName << " answered " << correctAns << " problems correctly!" << endl;
-        cout << userName << " gave " << (8 - correctAns - skipCount) << " wrong answers." << endl;
+        cout << userName << " answered " << correctAnswer << " problems correctly!" << endl;
+        cout << userName << " gave " << (8 - correctAnswer - skipCount) << " wrong answers." << endl;
         cout << userName << " skipped " << skipCount << " questions." << endl;
     }
     else 
@@ -116,8 +116,8 @@ retry:
         cin >> userName;
         cout << "You did not pass easy mode " << userName << "!" << " Try again." << endl;
         cout << "Total number of questions given: 8." << endl;
-        cout << userName << " answered " << correctAns << " problems correctly!" << endl;
-        cout << userName << " gave " << (8 - correctAns - skipCount) << " wrong answers." << endl;
+        cout << userName << " answered " << correctAnswer << " problems correctly!" << endl;
+        cout << userName << " gave " << (8 - correctAnswer - skipCount) << " wrong answers." << endl;
         cout << userName << " skipped " << skipCount << " questions." << endl;
 
         goto retry;
