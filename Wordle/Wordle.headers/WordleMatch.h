@@ -4,6 +4,11 @@
 #include <iostream>
 using namespace std;
 
+extern const int Word_Length;
+extern const int NO_MATCH;
+extern const int ALMOST_MATCH;
+extern const int MATCH;
+
 class WordleMatch
 {   
     public:
@@ -12,12 +17,7 @@ class WordleMatch
         bool isValid (string word);
         void markMatch(vector <vector <int>> &matches, int tryIndex, string target, string guess);
         bool check_AllMatch(string target, string guess);
-
-    private:
-        const int Word_Length = 5;
-        const int NO_MATCH = 0;
-        const int ALMOST_MATCH = 1;
-        const int MATCH = 2;
+        void startWordle();
 };
 
 #endif // WordleMatch
