@@ -49,7 +49,7 @@ level:
     cout << endl;
     cout << "Would you like to play again?\nType y for yes and n for no." << endl;
 
-    cin >> ch
+    cin >> ch;
      if (ch == 'y' || ch == 'Y')
         {
             goto level;
