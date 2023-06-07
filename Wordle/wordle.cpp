@@ -2,8 +2,8 @@
 #include <vector>
 #include <string>
 #include <algorithm>
-#include "../WordleDisplay.h"
-#include "../WordleMatch.h"
+#include "Wordle.headers/WordleDisplay.h"
+#include "Wordle.headers/WordleMatch.h"
 
 using namespace std;
 
