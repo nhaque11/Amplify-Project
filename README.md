@@ -12,7 +12,7 @@
   - For our group project, we have decided to develop a text/terminal based game that supports about 2-3 minigames for users to choose between. The games will include a guess the word option (ie wordle) that asks the user to guess the word within 6 tries and with proper (green, yellow, grey coloring) , a math game restricted to a set range of numbers (randomly generated) which allows users to choose between various modes that is (maybe timed) and keeps tab of score (highest score too) plus other pending features (start button), and lastly a game of Hangman.
 
   ### Tech Stack
- - C++ (as of right now)
+ - C++ 
  - Visual Studio Code
  - Git/Github
  - Valgrind
