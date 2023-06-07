@@ -24,7 +24,7 @@ void MathQuizGame::startGame()
 level:
     cout << "---------------------- Welcome To Math Quiz! ----------------------" << endl;
     cout << "Choose game mode" << endl;
-    cout << "1) Easy \n 2) Medium \n 3) Hard" << endl;
+    cout << " 1) Easy \n 2) Medium \n 3) Hard" << endl;
     cin >> mode;
     switch (mode)
     {
