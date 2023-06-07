@@ -4,7 +4,7 @@
 #include <string>
 #include <stdlib.h>
 
-#include "MathQuiz.h"
+#include "../header/MathQuiz.h"
 
 using namespace std;
 
@@ -220,7 +220,7 @@ void MathQuizGame::mediumMode()
                 {
                         cout << "Nice try, but you're not quite a math genius. Care to give it another shot?" << endl;
                         cout << "Total questions -> 10" << endl;
-                        cout << "You got " correctAnswer << " correct." << endl;
+                        cout << "You got " << correctAnswer << " correct." << endl;
                         cout << "You missed " << (10 - correctAnswer - skipCount) << "questions." << endl;
                         cout << "You skipped " << skipCount << " questions." << endl;
                         goto playAgain;
@@ -293,7 +293,7 @@ void MathQuizGame::hardMode()
                 {
                         cout << "Nice try, but you're not quite a math genius. Care to give it another shot?" << endl;
                         cout << "Total questions -> 10" << endl;
-                        cout << "You got " correctAnswer << " correct." << endl;
+                        cout << "You got " << correctAnswer << " correct." << endl;
                         cout << "You missed " << (10 - correctAnswer - skipCount) << "questions." << endl;
                         cout << "You skipped " << skipCount << " questions." << endl;
                         goto playAgain;
