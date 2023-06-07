@@ -64,11 +64,41 @@ level:
 
 void MathQuizGame::easyMode()
 {
-    int ans[8];
-    string question[8];
-    int answer[8] = {20, 12, 6, 14, 5, 1, 2, 5};
-    question[8] = {"Question 1) 5x4=___?", "Question 2) 6x2=___?", "Question 3) What is 3+3?", "Question 4) What is 6+8?", "Question 5) What is 9-4?", 
-                    "Question 6) 3-2=___?", "Question 7) What is 6/3?", "Question 8) What is 10/2?"};
+  int ans[8];
+  string question[8];
+  int answer[8] = {20, 12, 6, 14, 5, 1, 2, 5};
+
+// Assign values to the question array using a loop
+    for (int i = 0; i < 8; i++) 
+    {
+        switch (i) 
+        {
+            case 0:
+                question[i] = "Question 1) 5x4=___?";
+                break;
+            case 1:
+                question[i] = "Question 2) 6x2=___?";
+                break;
+            case 2:
+                question[i] = "Question 3) What is 3+3?";
+                break;
+            case 3:
+                question[i] = "Question 4) What is 6+8?";
+                break;
+            case 4:
+                question[i] = "Question 5) What is 9-4?";
+                break;
+            case 5:
+                question[i] = "Question 6) 3-2=___?";
+                break;
+            case 6:
+                question[i] = "Question 7) What is 6/3?";
+                break;
+            case 7:
+                question[i] = "Question 8) What is 10/2?";
+                break;
+        }
+    }
 
     ansCount = 0;
     correctAnswer = 0;
