@@ -4,7 +4,7 @@
 #include <iostream>
 using namespace std;
 
-class WordleDisplay
+class WordleMatch
 {   
     public:
         string getRandomWord();
