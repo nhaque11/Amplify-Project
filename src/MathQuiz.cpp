@@ -52,7 +52,7 @@ level:
     cout << endl;
     cout << "Would you like to play again?\nType y for yes and n for no." << endl;
 
-    cin >> ch
+    cin >> ch;
      if (ch == 'y' || ch == 'Y')
         {
             goto level;
@@ -103,7 +103,7 @@ retry:
     if (correctAnswer >= 5)
     {
         string userName;
-        cout << "Enter your name."
+        cout << "Enter your name.";
         cin >> userName;
         cout << "Congratulations " << userName << "!" << " You passed easy mode." << endl;
         cout << "Total number of questions given: 8." << endl;
@@ -114,7 +114,7 @@ retry:
     else 
     {
         string userName;
-        cout << "Enter your name."
+        cout << "Enter your name.";
         cin >> userName;
         cout << "You did not pass easy mode " << userName << "!" << " Try again." << endl;
         cout << "Total number of questions given: 8." << endl;
