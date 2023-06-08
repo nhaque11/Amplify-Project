@@ -2,7 +2,7 @@
 #include <vector>
 #include <string>
 #include <algorithm>
-#include  "../Wordle.headers/WordleMatch.h"
+#include  "../include/WordleMatch.h"
 
 using namespace std;
 
@@ -28,7 +28,8 @@ void WordleMatch::startWordle()
 
 void WordleMatch::toUpperCase(string &inputWord)
 {
-    //TODO
+    transform(inputWord.begin(), inputWord.end(), inputWord.begin(), [] (unsigned char c)
+    {return toupper(c);});
 }
 bool WordleMatch::isValid (string word)
 {
