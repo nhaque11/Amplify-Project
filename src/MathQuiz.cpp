@@ -129,7 +129,12 @@ retry:
                 cout << "Incorrect!" << endl;
                 cout << "The correct answer is: " << answer[i] << endl;
             }
-        }
+         }
+        else
+            {
+                skipCount++;
+                cout << "The correct answer is:  " << answer[i] << endl;
+            }
     }
 
     if (correctAnswer >= 5)
