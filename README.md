@@ -18,6 +18,7 @@
  - Valgrind
  - Google Test Framework
  - Lucidchart
+ - CMake
 
  ### Input/Output
  - Input: What the user is asked to input when choosing their profile settings, game choice, and game modes (if applicable), and gameplay
