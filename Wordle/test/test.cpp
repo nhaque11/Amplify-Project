@@ -48,3 +48,24 @@ TEST(isValidTests, REJECT)
     string REJECT = "lit";
     ASSERT_EQ(obj.isValid(REJECT), false);
 }
+
+TEST(checkAllMatchTests, RIGHT)
+{
+    string RIGHT = "RIGHT";
+    string GUESS = "RIGHT";
+    EXPECT_TRUE(obj.check_AllMatch(RIGHT,GUESS));
+}
+
+TEST(checkAllMatchTests, WRONG)
+{
+    string WRONG = "WRONG";
+    string GUESS = "GUESS";
+    EXPECT_FALSE(obj.check_AllMatch(WRONG,GUESS));
+}
+
+TEST(checkAllMatchTests, CASE)
+{
+    string CASE = "CaSE";
+    string GUESS = "CASE";
+    EXPECT_FALSE(obj.check_AllMatch(CASE, GUESS));
+}
