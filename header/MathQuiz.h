@@ -1,6 +1,6 @@
 
-#ifndef __MATHQUIZ_H__
-#define __MATHQUIZ_H__
+#ifndef _MATHQUIZ_H_
+#define _MATHQUIZ_H_
 
 class MathQuizGame
 {

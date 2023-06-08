@@ -4,7 +4,7 @@
 #include <string>
 #include <stdlib.h>
 
-#include "MathQuiz.h"
+#include "../header/MathQuiz.h"
 
 using namespace std;
 
@@ -24,7 +24,7 @@ void MathQuizGame::startGame()
 level:
     cout << "---------------------- Welcome To Math Quiz! ----------------------" << endl;
     cout << "Choose game mode" << endl;
-    cout << "1) Easy \n 2) Medium \n 3) Hard" << endl;
+    cout << " 1) Easy \n 2) Medium \n 3) Hard" << endl;
     cin >> mode;
     switch (mode)
     {
@@ -49,17 +49,21 @@ level:
         break;
     }
     cout << endl;
-    cout << "Would you like to play again?\nType y for yes and n for no." << endl;
+    
+    do {
+        cout << endl;
+        cout << "Would you like to play again?\nType y for yes and n for no." << endl;
 
-    cin >> ch;
-     if (ch == 'y' || ch == 'Y')
-        {
-            goto level;
+        cin >> ch;
+        if (ch == 'y' || ch == 'Y') {
+            // Perform any necessary tasks before starting the game again
+        } else {
+            // Clear the screen by printing newlines
+            for (int i = 0; i < 100; i++) {
+                cout << endl;
+            }
         }
-    else
-        {
-            system("cls");        //should be updated somehow to send user to title main menu screen! 
-        }
+    } while (ch == 'y' || ch == 'Y');
 }
 
 void MathQuizGame::easyMode()
@@ -220,7 +224,7 @@ void MathQuizGame::mediumMode()
                 {
                         cout << "Nice try, but you're not quite a math genius. Care to give it another shot?" << endl;
                         cout << "Total questions -> 10" << endl;
-                        cout << "You got " correctAnswer << " correct." << endl;
+                        cout << "You got " << correctAnswer << " correct." << endl;
                         cout << "You missed " << (10 - correctAnswer - skipCount) << "questions." << endl;
                         cout << "You skipped " << skipCount << " questions." << endl;
                         goto playAgain;
@@ -293,10 +297,17 @@ void MathQuizGame::hardMode()
                 {
                         cout << "Nice try, but you're not quite a math genius. Care to give it another shot?" << endl;
                         cout << "Total questions -> 10" << endl;
-                        cout << "You got " correctAnswer << " correct." << endl;
+                        cout << "You got " << correctAnswer << " correct." << endl;
                         cout << "You missed " << (10 - correctAnswer - skipCount) << "questions." << endl;
                         cout << "You skipped " << skipCount << " questions." << endl;
                         goto playAgain;
                 }
 
+}
+
+int main()
+{
+    MathQuizGame math;
+    math.startGame();
+    return 0;
 }
