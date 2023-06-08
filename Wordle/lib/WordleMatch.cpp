@@ -2,6 +2,7 @@
 #include <vector>
 #include <string>
 #include <algorithm>
+#include <cctype>
 #include  "../include/WordleMatch.h"
 
 using namespace std;
@@ -33,8 +34,8 @@ void WordleMatch::toUpperCase(string &inputWord)
 }
 bool WordleMatch::isValid (string word)
 {
-    //TODO
-    return true;
+    return word.length() == 5 && word.find_first_not_of("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+    == string::npos;
 }
 void WordleMatch::markMatch(vector <vector <int>> &matches, int tryIndex, string target, string guess)
 {
