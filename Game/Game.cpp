@@ -14,5 +14,5 @@ string Game::getName() {
 }
 
 void Game::play() {
-    
+    cout << "idk what to code for this";
 }
