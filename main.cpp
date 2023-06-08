@@ -4,19 +4,22 @@
 
 #include "Wordle.h"
 #include "Hangman.h"
-#include "MQuiz.h"
+#include "MathQuiz.h"
 #include "Game.h"
 
 using namespace std;
 
 int main() {
-    string userName;
+    string input;
     string userChoice;
+    Game name;
 
     cout << "Enter your name: " << endl;
-    cin >> userName;
+    cin >> input;
+    name.username(string input);
+    system("cls");
 
-    cout << "Welcome to Amplify " << userName << " !" << endl;
+    cout << "Welcome to Amplify " << getName() << " !" << endl;
     cout << endl;
     cout << "Game Choices:" << endl;
     cout << endl;
@@ -30,18 +33,15 @@ int main() {
     cin >> userChoice;
 
     if (userChoice == "Wordle") {
-        system("clear");
-        play(Wordle);
+        startWordle()
     }
     else if (userChoice == "Math Quiz") {
-        system("clear");
-        play(MathQuiz);
+        startGame();
     }
     else if (userChoice == "Hangman") {
-        system("clear");
         play(Hangman);
     }
-    else if (userChoice == "Quiz") {
+    else if (userChoice == "Quit") {
         exit(1);
     }
 }
