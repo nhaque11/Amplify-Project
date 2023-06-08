@@ -10,7 +10,7 @@ using namespace std;
 
 void MathQuizGame::startGame()
 {
-    system("cls");
+    system("clear");
 
     time_t current = time(0);
 
