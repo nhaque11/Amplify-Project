@@ -15,3 +15,5 @@ class MathQuizGame
         void mediumMode();
         void hardMode();
 };
+
+#endif
