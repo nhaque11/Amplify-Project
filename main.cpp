@@ -10,9 +10,13 @@
 using namespace std;
 
 int main() {
-    getName();
+    string userName;
     string userChoice;
-    cout << "Welcome to Amplify " << name << " !" << endl;
+
+    cout << "Enter your name: " << endl;
+    cin >> userName;
+
+    cout << "Welcome to Amplify " << userName << " !" << endl;
     cout << endl;
     cout << "Game Choices:" << endl;
     cout << endl;
@@ -26,13 +30,15 @@ int main() {
     cin >> userChoice;
 
     if (userChoice == "Wordle") {
-        
+        system("clear");
         play(Wordle);
     }
     else if (userChoice == "Math Quiz") {
+        system("clear");
         play(MathQuiz);
     }
     else if (userChoice == "Hangman") {
+        system("clear");
         play(Hangman);
     }
     else if (userChoice == "Quiz") {
