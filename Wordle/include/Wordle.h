@@ -8,7 +8,7 @@
 
 using namespace std;
 
-class WordleGame : public Game
+class WordleGame 
 {
 	public:
 		void startGame();
