@@ -124,7 +124,7 @@ void MathQuizGame::easyMode()
 
  cout << "Enter an answer after question is displayed (enter 0 to skip a question)." << endl;
 
-retry:
+//retry:
     for (int i = 0; i < 8; ++i)
     {
         cout << question[i] << endl;
@@ -173,7 +173,7 @@ retry:
         cout << userName << " gave " << (8 - correctAnswer - skipCount) << " wrong answers." << endl;
         cout << userName << " skipped " << skipCount << " questions." << endl;
 
-        goto retry;
+        //goto retry;
     }
 }
 
@@ -202,7 +202,7 @@ void MathQuizGame::mediumMode()
         cout << "Medium Math Quiz" << endl;
         cout << "Instructions for this mode: Please enter an answer using the keyboard. If you want to skip a question, please enter 0. The answer for a question will never be 0." << endl;
 
-        playAgain:
+       // playAgain:
 
                 for (int i = 0; i < 10; i++)
                 {
@@ -244,9 +244,9 @@ void MathQuizGame::mediumMode()
                         cout << "Nice try, but you're not quite a math genius. Care to give it another shot?" << endl;
                         cout << "Total questions -> 10" << endl;
                         cout << "You got " << correctAnswer << " correct." << endl;
-                        cout << "You missed " << (10 - correctAnswer - skipCount) << "questions." << endl;
+                        cout << "You missed " << (10 - correctAnswer - skipCount) << " questions." << endl;
                         cout << "You skipped " << skipCount << " questions." << endl;
-                        goto playAgain;
+                        //goto playAgain;
                 }
 }
 
@@ -275,7 +275,7 @@ void MathQuizGame::hardMode()
         cout << "Hard Math Quiz" << endl;
         cout << "Instructions for this mode: Please enter an answer using the keyboard. If you want to skip a question, please enter 0. The answer for a question will never be 0." << " Round to the nearest whole number!" << endl;
 
-        playAgain:
+        //playAgain:
 
                 for (int i = 0; i < 10; i++)
                 {
@@ -317,9 +317,9 @@ void MathQuizGame::hardMode()
                         cout << "Nice try, but you're not quite a math genius. Care to give it another shot?" << endl;
                         cout << "Total questions -> 10" << endl;
                         cout << "You got " << correctAnswer << " correct." << endl;
-                        cout << "You missed " << (10 - correctAnswer - skipCount) << "questions." << endl;
+                        cout << "You missed " << (10 - correctAnswer - skipCount) << " questions." << endl;
                         cout << "You skipped " << skipCount << " questions." << endl;
-                        goto playAgain;
+                       // goto playAgain;
                 }
 
 }
