@@ -2,8 +2,7 @@
 #include <string> 
 #include <stdlib.h> 
 #include <ctime>
-#include <conio.h> 
-
+// #include <conio.h>
 
 #include "../header/Hangman.h"
 
@@ -107,10 +106,7 @@ void HangmanGame::startGame()
    	}
 	else
 	{
-	    exit(0);
+	    system("clear");
 	}
-	
-	system("clear");
-	 
 }
 
