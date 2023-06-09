@@ -17,7 +17,7 @@ int main() {
     cout << "Enter your name: " << endl;
     cin >> input;
     name.username(string input);
-    system("cls");
+    system("clear");
 
     cout << "Welcome to Amplify " << getName() << " !" << endl;
     cout << endl;
@@ -32,16 +32,20 @@ int main() {
     cout << "Select an option:";
     cin >> userChoice;
 
-    if (userChoice == "Wordle") {
+    if (userChoice == "Wordle") 
+    {
         startWordle()
     }
-    else if (userChoice == "Math Quiz") {
+    else if (userChoice == "Math Quiz") 
+    {
         startGame();
     }
-    else if (userChoice == "Hangman") {
-        play(Hangman);
+    else if (userChoice == "Hangman") 
+    {
+        startHangman();
     }
-    else if (userChoice == "Quit") {
+    else if (userChoice == "Quit") 
+    {
         exit(1);
     }
 
