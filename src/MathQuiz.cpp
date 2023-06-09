@@ -247,7 +247,7 @@ void MathQuizGame::hardMode()
 
         string question[10] =
         {
-                "Adam has 24 pieces of candy in the night of Halloween, but 3 were just wrappers.He gave 10 pieces to his brother. How many pieces does Adam have left to eat? ",
+                "Adam has 24 pieces of candy in the night of Halloween, but 3 were just wrappers. He gave 10 pieces to his brother. How many pieces does Adam have left to eat? ",
                 "What is the derivative of 99x? ",
                 "What is the definite integral of 10x from [2,3]? ",
                 "What is the remainder of 90/7? ",
