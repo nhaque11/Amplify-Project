@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <ctime>
 #include <array>
@@ -11,60 +10,74 @@ using namespace std;
 
 void MathQuizGame::startGame()
 {
-    system("clear");
-
-    time_t current = time(0);
-
-    char *display = ctime(&current);
-
-    cout << "\nLocal Date and Time: " << display << endl << endl;
-
-    int mode;
-    char ch;
-
-level:
-    cout << "---------------------- Welcome To Math Quiz! ----------------------" << endl;
-    cout << "Choose game mode" << endl;
-    cout << " 1) Easy \n 2) Medium \n 3) Hard" << endl;
-    cin >> mode;
-    switch (mode)
-    {
-        case 1:
-        cout << "---------------------- Easy Mode ----------------------" << endl;
-        easyMode();
-        break;
-
-        case 2:
-        cout << "---------------------- Medium Mode ----------------------" << endl;
-        mediumMode();
-        break;
-
-        case 3:
-        cout << "---------------------- Hard Mode ----------------------" << endl;
-        hardMode();
-        break;
-
-        default:
-        cout << "Invalid input. Choose from list of modes!" << endl;
-        goto level;
-        break;
-    }
-    cout << endl;
-
-   //make sure user is able to play again
-	char descision;
-	cout << "Would you like to play again? Type y for Yes and n for No" << endl;
-	cin >> descision;
+	system("clear");
+	time_t current = time(0);
+	char *display = ctime(&current);
 	
-	if (descision == 'y')
+	cout << "\nLocal Date and Time: " << display << endl << endl;
+	string mode = "no mode";
+	char ch;
+	
+	cout << "---------------------- Welcome To Math Quiz! ----------------------" << endl << endl;
+	cout << "Choose game mode" << endl << endl;
+	cout << " 1) Easy \n 2) Medium \n 3) Hard" << endl << endl;
+	cout << "Mode: ";
+	cin >> mode;
+
+	int flag = 1;
+	while (flag == 1)
 	{
-	   startGame();
-   	}
-	else
-	{
-	   system("clear");
+		if (mode == "1")
+		{
+			flag = 0;
+			cout << "---------------------- Easy Mode ----------------------" << endl;
+			easyMode();
+		}
+		else if (mode == "2")
+		{
+			flag = 0;
+			cout << "---------------------- Medium Mode ----------------------" << endl;
+			mediumMode();
+		}
+		else if (mode == "3")
+		{
+			flag = 0;
+			cout << "---------------------- Hard Mode ----------------------" << endl;
+			hardMode();
+		}
+		else
+		{
+			cout << "Invalid input. Choose from the list of modes: ";
+			cin >> mode;
+		}
 	}
-	 
+		
+	cout << endl;
+		
+	string decision = "no decision";
+	cout << "Would you like to play again? Type y for Yes and n for No: ";
+	cin >> decision;	
+	
+	flag = 1;
+		
+	while (flag == 1)
+	{
+		if (decision == "y")
+		{
+			flag = 0;
+			startGame();
+		}			
+		else if (decision == "n")
+		{
+			flag = 0;
+			system("clear");
+		}
+		else
+		{
+			cout << "Please type y for Yes or n for No: ";
+			cin >> decision;
+		}
+	}
 }
 
 void MathQuizGame::easyMode()
