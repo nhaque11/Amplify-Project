@@ -10,7 +10,7 @@ using namespace std;
 
 void MathQuizGame::startGame()
 {
-	system("clear");
+	//system("clear");
 	time_t current = time(0);
 	char *display = ctime(&current);
 	
@@ -70,7 +70,7 @@ void MathQuizGame::startGame()
 		else if (decision == "n")
 		{
 			flag = 0;
-			system("clear");
+			//system("clear");
 		}
 		else
 		{
