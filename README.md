@@ -6,10 +6,10 @@
  [Naquib Haque](https://github.com/nhaqu008), [Jarod Hendrickson](https://github.com/jhend023), [Jason Chau](https://github.com/jchau044), [Alex Ha](https://github.com/aha053)
 
 ## Project Description
- - The project is interesting to us because each one of us has played mini-games and apps on our phones that have at some point improved our critical thinking skills and our project will be the perfect opportunity to help people practice and have fun while learning as an individual or even as a group. 
+ - The project is interesting to us because each one of us has played mini-games and apps on our phones that have at some point enhanced our critical thinking skills and our project is the perfect opportunity to practice and have fun improving our thinking skills whether it is as an individual or with a group. 
  
   ### Features    
-  - For our group project, we have decided to develop a text/terminal based game that supports about 2-3 minigames for users to choose between. The games will include a guess the word option (ie wordle) that asks the user to guess the word within 6 tries and with proper (green, yellow, grey coloring) , a math game restricted to a set range of numbers (randomly generated) which allows users to choose between various modes that is (maybe timed) and keeps tab of score (highest score too) plus other pending features (start button), and lastly a game of Hangman.
+  - For our group project, we have decided to develop a text/terminal based brain game that supports 3 minigames for users to choose between and play. The games will include a guess the word option (ie wordle) that asks the user to guess the word within 6 tries and with proper (green, yellow, grey coloring), a math game restricted to a set range of questions that are randomly chosen for a user to answer, giving users to choose between various difficulties and keeping tab of game statistics, and lastly a game of Hangman restricted to a set range of questions that are also randonmly chosen, which displays a stickfigure based on attempts remaining and a row of letters that the user has already used.
 
   ### Tech Stack
  - C++ 
