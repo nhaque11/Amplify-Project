@@ -5,8 +5,8 @@
 
 using namespace std;
 
-string Game::gameName(string name) { 
-    cout << "wip" << endl;
+string Game::username(string input) { 
+    string name = input;
 }
 
 string Game::getName() {
@@ -14,5 +14,5 @@ string Game::getName() {
 }
 
 void Game::play() {
-    cout << "wip" << endl;
+    cout << "idk what to code for this";
 }

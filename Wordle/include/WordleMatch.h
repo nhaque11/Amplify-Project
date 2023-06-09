@@ -2,6 +2,7 @@
 #define __WORDLEMATCH_H__
 
 #include <iostream>
+#include <vector>
 using namespace std;
 
 extern const int Word_Length;
