@@ -8,8 +8,7 @@ using namespace std;
 class WordleMatch
 {   
     public:
-        void startWordle();
-        void printWordleMenu();
+        void startGame();
     private:
         string getRandomWord();
         void toUpperCase(string &inputWord);
@@ -17,6 +16,7 @@ class WordleMatch
         bool check_AllMatch(string target, string guess);
         void markMatch(vector <vector <int>> &matches, int tryIndex, string target, string guess);
         void printWordle(vector<string> tries, vector <vector<int>> matches, int currTry);
+        void printWordleMenu();
         const int Word_Length = 5;
         const int NO_MATCH = 0;
         const int ALMOST_MATCH = 1;
