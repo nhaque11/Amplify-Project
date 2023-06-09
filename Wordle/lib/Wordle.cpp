@@ -66,15 +66,53 @@ bool WordleMatch::check_AllMatch(string target, string guess)
 
 void printWordle(vector<string> tries, vector <vector<int>> matches, int currTry)
 {   
-    //TODO
+    printWordleMenu();
+    for (int i = 0; i <= currTry && i <tries.size())
+    {
+        string seperate = "-";
+        string outLine = "|";
+        string text = " | "
+        for (int j = 0; ; j < tries[i].length(); j++)
+        {
+            seperate += "------";
+            outLine += "     |";
+            char val = toupper(tries[i][j]);
+            text += "  ";
+            if (matches[i][j] == ALMOST_MATCH)
+            {
+                text += "\033[33m";
+            }
+            else if (matches[i][j])
+            {
+                text += "\033[32m";
+            }
+            text += val;
+            if (matches[i][j] == ALMOST_MATCH || matches[i][j] == MATCH)
+            {
+                text += "\033[0m";
+            }
+            text += "  |";
+        }
+        if (i == 0)
+        {
+            cout << separate << endl;
+        }
+        cout << outLine << endl;
+        cout << text << endl;
+        cout << outLine << endl;
+        cout << seperate << endl;
+    }
 }
 
 void printWordleMenu()
 {
-    //TODO
+    system("clear");
+    cout << "---------------------- Welcome To Wordle! ----------------------" << endl;
+    cout << "Please enter your guess (word length must be " 
+    + to_string(Word_Length) + ") or type Q/q to quit: " << endl;
 }
 
-void WordleMatch::startWordle()
+void WordleMatch::startGame()
 {
     int numTries = 6;
     string targetWord = getRandomWord();
