@@ -43,7 +43,12 @@ void WordleMatch::markMatch(vector <vector <int>> &matches, int tryIndex, string
 }
 bool WordleMatch::check_AllMatch(string target, string guess)
 {
-    //TODO
-    return false;
+    for (int i = 0; i < guess.length(); i++)
+    {
+        if(guess.at(i) != target.at(i)){
+            return false;
+        }
+    }
+    return true;
 }
 
