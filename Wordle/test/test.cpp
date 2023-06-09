@@ -70,4 +70,3 @@ TEST(checkAllMatchTests, CASE)
     string GUESS = "CASE";
     EXPECT_FALSE(obj.check_AllMatch(CASE, GUESS));
 }
-
