@@ -70,3 +70,30 @@ TEST(checkAllMatchTests, CASE)
     string GUESS = "CASE";
     EXPECT_FALSE(obj.check_AllMatch(CASE, GUESS));
 }
+
+TEST(checkGetRandomWord, RandomWordTest)
+{
+    string word = obj.getRandomWord();
+    
+    bool wordFound = false;
+    for (const string& gameWords : gameWord) {
+        if (word == gameWords) {
+            wordFound = true;
+            break;
+        }
+    }
+    EXPECT_TRUE(wordFound);
+
+    string previousWord = word;
+    bool differentWordsReturned = false;
+
+    for (int i = 0; i < 10; ++i) {
+        word = obj.getRandomWord();
+        if (word != previousWord) {
+            differentWordsReturned = true;
+            break;
+        }
+        previousWord = word;
+    }
+    EXPECT_TRUE(differentWordsReturned);
+}
