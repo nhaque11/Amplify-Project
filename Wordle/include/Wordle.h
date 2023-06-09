@@ -5,7 +5,7 @@
 #include <vector>
 using namespace std;
 
-class WordleMatch
+class Wordle: public Game
 {   
     public:
         void startGame();
