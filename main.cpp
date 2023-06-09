@@ -3,6 +3,9 @@
 #include <stdlib.h>
 
 #include "Game/Game.h"
+#include "Wordle/include/Wordle.h"
+#include "header/MathQuiz.h"
+#include "header/Hangman.h"
 
 using namespace std;
 

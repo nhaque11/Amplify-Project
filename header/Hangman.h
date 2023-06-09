@@ -1,14 +1,11 @@
 #ifndef HANGMAN_H
 #define HANGMAN_H
 
-class HangmanGame
+class HangmanGame : public Game
 {
-    public:
-    
-        void figureDisplay(int);
-        void startHangman();
-    
+	public:
+		void figureDisplay(int);
+		void startHangman();
 };
 
 #endif
-
