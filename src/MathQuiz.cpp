@@ -62,10 +62,8 @@ level:
    	}
 	else
 	{
-	    exit(0);
+	   system("clear");
 	}
-	
-	system("clear");
 	 
 }
 
