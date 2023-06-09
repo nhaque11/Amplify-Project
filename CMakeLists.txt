@@ -4,7 +4,6 @@ ADD_EXECUTABLE(amplify
         main.cpp
 	src/MathQuiz.cpp
 	Game/Game.cpp
-	Wordle/wordle.cpp
-	Wordle/Wordle.src/WordleDisplay.cpp
-	Wordle/Wordle.src/WordleMatch.cpp
+	Wordle/lib/WordleDisplay.cpp
+	Wordle/lib/WordleMatch.cpp
 )
