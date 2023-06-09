@@ -64,9 +64,11 @@ This UML diagram follows the open/closed principle and interface segregation pri
  <img width="805" alt="Screen Shot 2023-06-09 at 1 46 34 PM" src="https://github.com/cs100/final-project-nhaqu008-jhend023-jchau044-aha053/assets/99585088/2ab74074-b014-40a6-a63f-c1d7a875a259">
 
  ## Testing
- - This project was tested through a series of various unit tests through the Google Tests Framework. We compiled and tested the Worlde, Hangman, and Math Quiz classes through a test executable where the cpp files are found through the test folder. 
+ - This project was tested through a series of various unit tests through the Google Tests Framework. We compiled and tested the Worlde, Hangman, and Math Quiz classes through a test executable where the cpp files are found through the test folder. Valgrind was also run to make sure there are no memory leaks or errors with other variables. 
  - Made sure the functions in the game runs properly without displaying anything incorrectly.
  - The inputs from the user are taken into account when matching it to its correlated questions.
+ - Here is the screenshot of the Valgrind executable being run.
+![valgrindtest](https://github.com/cs100/final-project-nhaqu008-jhend023-jchau044-aha053/assets/99585088/9a69c32b-36b9-4790-851d-a3a4fcd3fb5d)
  - Here is a screenshot of passed tests in the Wordle test suite for example.
  <img width="1014" alt="Screenshot 2023-06-09 at 1 21 54 PM" src="https://github.com/cs100/final-project-nhaqu008-jhend023-jchau044-aha053/assets/102707406/48973b43-ebff-4566-82fa-4ead0e1c05cd">
 
