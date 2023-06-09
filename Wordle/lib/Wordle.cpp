@@ -3,30 +3,14 @@
 #include <string>
 #include <algorithm>
 #include <cctype>
-#include  "../include/WordleMatch.h"
+#include  "../include/Wordle.h"
 
 using namespace std;
-
-const int Word_Length = 5;
-const int NO_MATCH = 0;
-const int ALMOST_MATCH = 1;
-const int MATCH = 2;
 
 string WordleMatch::getRandomWord()
 {
     //TODO
     return "ready";
-}
-
-void WordleMatch::startWordle()
-{
-    int numTries = 6;
-    string targetWord = getRandomWord();
-    toUpperCase(targetWord);
-    vector <string> tries(numTries);
-    vector <vector<int>> matches(numTries, vector<int> (Word_Length));
-    string input = "";
-    int currTry = 0;
 }
 
 void WordleMatch::toUpperCase(string &inputWord)
@@ -75,3 +59,49 @@ bool WordleMatch::check_AllMatch(string target, string guess)
     return true;
 }
 
+void printWordle(vector<string> tries, vector <vector<int>> matches, int currTry)
+{   
+    //TODO
+}
+
+void printWordleMenu()
+{
+    //TODO
+}
+
+void WordleMatch::startWordle()
+{
+    int numTries = 6;
+    string targetWord = getRandomWord();
+    toUpperCase(targetWord);
+    vector <string> tries(numTries);
+    vector <vector<int>> matches(numTries, vector<int> (Word_Length));
+    string inputWord = "";
+    int currTry = 0;
+
+    while (currTry < numTries){
+        do
+        {
+            getline(cin,inputWord);
+
+        } while (inputWord != "Q" && !isValid(inputWord));
+
+        if (inputWord == "Q")
+        {
+            cout << "Quit Game" << endl;
+            break;
+        }
+        tries[currTry] = inputWord;
+        currTry++;
+    }
+    markMatch(matches, currTry, targetWord, inputWord);
+    printWordle(tries, matches, currTry);
+    if (check_AllMatch(targetWord, inputWord))
+    {
+        cout << "You found the word! Congragulations!" << endl;
+    }
+    else if (currTry == numTries)
+    {
+        cout << "You did not find the word! The word was " << targetWord << "." << endl;
+    }
+}
