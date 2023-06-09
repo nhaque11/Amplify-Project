@@ -30,9 +30,9 @@ void HangmanGame::figureDisplay(int lives)
 void HangmanGame::startHangman()
 {
     srand (time(NULL));
-	string gameWords[15] = {"artist","lucky","mango","television","beach", "wedding", "vacation", 
+    string gameWords[15] = {"artist","lucky","mango","television","beach", "wedding", "vacation", 
     "earth", "superhero", "sports", "cake", "jewelry", "happy", "letter", "golden"};
-	string word;
+    string word;
     string guessedLetters;
 
     word = gameWords[rand() % 15];
@@ -61,7 +61,7 @@ void HangmanGame::startHangman()
 		figureDisplay(lives);
 		
 		if(foundLetter == word.length())
-        {
+        	{
 			cout << "Hooray you guessed the word and saved the figure!" << endl;
 			break;
 		}
@@ -74,13 +74,13 @@ void HangmanGame::startHangman()
 		guessedLetters = guessedLetters + " " + guess;
 		
 		if(displayWord.find(guess) != string::npos) 
-        lives++;
+        	lives++;
 		
 		checkFound = 0;
 		for(int i=0; i < word.length(); i++)
-        {
+       		 {
 			if(word[i] == guess && displayWord[i] == '_')
-            {
+            		{
 				displayWord[i] = guess;
 				foundLetter++;
 				checkFound = 1; 
@@ -92,9 +92,9 @@ void HangmanGame::startHangman()
     }
 
 	if(foundLetter != word.length())
-    {
-		cout << "Uh oh, you did not guess the word to save the figure, better luck next time." << endl;
-	}
+    		{
+			cout << "Uh oh, you did not guess the word to save the figure, better luck next time." << endl;
+		}
     
 	//make sure user is able to play again
 	char descision;
@@ -104,11 +104,12 @@ void HangmanGame::startHangman()
 	if (descision == 'y')
 	{
 	   startHangman();
-    }
+   	}
 	else
 	{
 	    exit(0);
 	}
+	
 	system("clear");
 	 
 }
