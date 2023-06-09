@@ -4,6 +4,7 @@
 #include <ctime>
 #include <conio.h> 
 
+
 #include "Hangman.h"
 
 using namespace std;
@@ -111,3 +112,4 @@ void HangmanGame::startHangman()
 	system("clear");
 	 
 }
+
