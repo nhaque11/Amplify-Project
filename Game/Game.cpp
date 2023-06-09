@@ -5,14 +5,14 @@
 
 using namespace std;
 
-string Game::gameName(string name) { 
-    cout << "wip" << endl;
-}
+string Game::username(string input) { 
+    string name = input;
 
 string Game::getName() {
     return name;
 }
 
 void Game::play() {
-    cout << "wip" << endl;
+    cout << "idk what to code for this";
 }
+
