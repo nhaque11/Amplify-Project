@@ -46,7 +46,7 @@ The class diagram is centered around our game object. The three games (Wordle, H
 
 This UML diagram follows the open/closed principle and interface segregation principle.
 - Open/closed principle : This principle is applied to the game object file and the minigames incorporate the virtual startGame() function directly. The use of polymorpheism of the game object function helps reduce code duplication in all games and allows for any new additional game to be added without the need of changing the base class. This principle not only allows the code to be scaleable with additional games, but also enforces abstraction behind the each game's specific internal functionality. (ie only startGame() being the main public function)
-- Interface segregation principle: This principle is applied to the Amplify project game, as each minigame gets their own interface. Simply any result played from each game should not be in the interface of the clinet main menu and/or any other game. Each game has their own interface per each user and also no minigame inherits any useless methods, fully enforcing the integration segregation princple. 
+- Interface segregation principle: This principle is applied to the Amplify project game, as each minigame gets their own interface. Simply any result played from each game should not be in the interface of the client main menu and/or any other game. Each game has their own interface per each user and also no minigame inherits any useless methods, fully enforcing the integration segregation princple. 
 
  
  ## Screenshots
