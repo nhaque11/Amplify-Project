@@ -24,3 +24,27 @@ TEST(toUpperTests, LIMIT)
     obj.toUpperCase(LIMIT);
     ASSERT_EQ(LIMIT, "BELLIGERENT");
 }
+
+TEST(isValidTests, TRUE)
+{
+    string TRUE = "SMART";
+    EXPECT_NO_THROW(obj.isValid(TRUE););
+}
+
+TEST(isValidTests, INVALID)
+{
+    string INVALID = "MULTIPLE";
+    EXPECT_FALSE(obj.isValid(INVALID));
+}
+
+TEST(isValidTests, LOWERCASE)
+{
+    string LOWERCASE = "valid";
+    ASSERT_EQ(obj.isValid(LOWERCASE), false);
+}
+
+TEST(isValidTests, REJECT)
+{
+    string REJECT = "lit";
+    ASSERT_EQ(obj.isValid(REJECT), false);
+}
