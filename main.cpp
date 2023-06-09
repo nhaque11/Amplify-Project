@@ -2,13 +2,24 @@
 #include <iostream>
 #include <stdlib.h>
 
+#include "Wordle.h"
+#include "Hangman.h"
+#include "MathQuiz.h"
+#include "Game.h"
+
 using namespace std;
 
 int main() {
+    string input;
     string userChoice;
-    cout << "What is your name?" << endl;
-    cin >> userChoice;
-    cout << "Welcome to Amplify " << userChoice << " !" << endl;
+    Game name;
+
+    cout << "Enter your name: " << endl;
+    cin >> input;
+    name.username(string input);
+    system("cls");
+
+    cout << "Welcome to Amplify " << getName() << " !" << endl;
     cout << endl;
     cout << "Game Choices:" << endl;
     cout << endl;
@@ -21,14 +32,11 @@ int main() {
     cout << "Select an option:";
     cin >> userChoice;
 
-    /*
-
     if (userChoice == "Wordle") {
-        
-        play(Wordle);
+        startWordle()
     }
     else if (userChoice == "Math Quiz") {
-        play(MathQuiz);
+        startGame();
     }
     else if (userChoice == "Hangman") {
         play(Hangman);
@@ -37,6 +45,5 @@ int main() {
         exit(1);
     }
 
-    */
     return 0;
 }

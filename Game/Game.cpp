@@ -7,6 +7,7 @@ using namespace std;
 
 string Game::username(string input) { 
     string name = input;
+}
 
 string Game::getName() {
     return name;
@@ -15,4 +16,3 @@ string Game::getName() {
 void Game::play() {
     cout << "idk what to code for this";
 }
-
