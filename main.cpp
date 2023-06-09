@@ -26,10 +26,10 @@ int main() {
     cout << "1. Wordle" << endl;
     cout << "2. Math Quiz" << endl;
     cout << "3. Hangman" << endl;
-    cout << "4. Quit" << endl
+    cout << "4. Quit" << endl;
     cout << endl;
     cout << endl;
-    cout << "Select an option:"
+    cout << "Select an option:";
     cin >> userChoice;
 
     if (userChoice == "Wordle") {
@@ -44,4 +44,6 @@ int main() {
     else if (userChoice == "Quit") {
         exit(1);
     }
+
+    return 0;
 }
