@@ -1,8 +1,7 @@
 #include <iostream>
-#include <string> 
-#include <stdlib.h> 
+#include <string>
+#include <stdlib.h>
 #include <ctime>
-// #include <conio.h>
 
 #include "../header/Hangman.h"
 
@@ -10,39 +9,40 @@ using namespace std;
 
 void HangmanGame::figureDisplay(int lives)
 {
-    cout << endl << endl;
+	cout << endl << endl;
 	cout << "  -----" << endl;
-	cout << "  |   |" << endl; 
-	cout << "  |"; 
-    if(lives >= 1) cout << "   O    "; 
-    cout <<endl;
-	cout << "  |"; 
-    if(lives >= 3) cout << "  /|\\   "; 
-    cout <<endl;
-	cout<< "  |"; 
-    if(lives >= 5) cout << "  / \\    "; 
-    cout <<endl;
-	cout<< "  |" << endl; 
+	cout << "  |   |" << endl;
+	cout << "  |";
+	
+	if(lives >= 1) cout << "   O    ";
+    	cout <<endl;
+	cout << "  |";
+	if(lives >= 3) cout << "  /|\\   ";
+	cout <<endl;
+	cout<< "  |";
+	if(lives >= 5) cout << "  / \\    ";
+	cout <<endl;
+	cout<< "  |" << endl;
 	cout<< "__|__" << endl;
 }
 
 void HangmanGame::startGame()
 {
-    srand (time(NULL));
-    string gameWords[15] = {"artist","lucky","mango","television","beach", "wedding", "vacation", 
-    "earth", "superhero", "sports", "cake", "jewelry", "happy", "letter", "golden"};
-    string word;
-    string guessedLetters;
-
-    word = gameWords[rand() % 15];
-    cout << endl << endl;
-    string displayWord (word.length(), '_');
-
-    int foundLetter = 0;
+	srand (time(NULL));
+	string gameWords[15] = {"artist","lucky","mango","television","beach", "wedding", "vacation", 
+				"earth", "superhero", "sports", "cake", "jewelry", "happy", "letter", "golden"};
+	string word;
+	string guessedLetters;
+	
+	word = gameWords[rand() % 15];
+	cout << endl << endl;
+	string displayWord (word.length(), '_');
+	
+	int foundLetter = 0;
 	char guess = ' ';
 	int lives = 5;
-	int checkFound = 0; 
-
+	int checkFound = 0;
+	
     while(lives >= 0)
     {
 		system("clear");
@@ -67,7 +67,7 @@ void HangmanGame::startGame()
 
         if(lives == 0) break; 
 	
-		cout << "Choose a Letter:";
+		cout << endl << "Choose a Letter: ";
 		cin >> guess;
 		
 		guessedLetters = guessedLetters + " " + guess;
@@ -92,21 +92,33 @@ void HangmanGame::startGame()
 
 	if(foundLetter != word.length())
     		{
-			cout << "Uh oh, you did not guess the word to save the figure, better luck next time." << endl;
+			cout << endl << "Uh oh, you did not guess the word to save the figure, better luck next time." << endl;
 		}
-    
 	//make sure user is able to play again
-	char descision;
-	cout << "Would you like to play again? Type y for Yes and n for No" << endl;
-	cin >> descision;
+	string decision = "no decision";
+	cout << "Would you like to play again? Type y for Yes and n for No: ";
+	cin >> decision;
 	
-	if (descision == 'y')
+	int flag = 1;
+
+	while (flag == 1)
 	{
-	   startGame();
-   	}
-	else
-	{
-	    system("clear");
+		if (decision == "y")
+		{
+			flag = 0;
+	   		startGame();
+   		}
+		else if (decision == "n")
+		{
+	    		flag = 0;
+		}
+		else
+		{
+			cout << "Please type y for Yes and n for No: ";
+			cin >> decision;
+		}
 	}
+
+	system("clear");
 }
 

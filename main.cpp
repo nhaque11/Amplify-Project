@@ -14,7 +14,9 @@ int main()
 	int flag = 0;
 	string userInput = "no input";
 	string userName = "no username";
-	
+
+	system("clear");
+
 	cout << "Enter your name: " << endl;
 	cin >> userName;
 	
