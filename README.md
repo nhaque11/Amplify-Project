@@ -63,5 +63,7 @@ This UML diagram follows the open/closed principle and interface segregation pri
  > Instructions on installing and running your application
  ## Testing
  > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
- 
+ > This project was validated through Google Test. Here is a screenshot of passed tests in the Wordle test suite.
+ <img width="1014" alt="Screenshot 2023-06-09 at 1 21 54 PM" src="https://github.com/cs100/final-project-nhaqu008-jhend023-jchau044-aha053/assets/102707406/48973b43-ebff-4566-82fa-4ead0e1c05cd">
+
  
