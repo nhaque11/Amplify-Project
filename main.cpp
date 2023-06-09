@@ -34,7 +34,7 @@ int main() {
 
     if (userChoice == "Wordle") 
     {
-        startWordle()
+        startWordle();
     }
     else if (userChoice == "Math Quiz") 
     {
