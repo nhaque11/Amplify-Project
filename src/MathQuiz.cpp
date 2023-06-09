@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <ctime>
 #include <array>
@@ -10,7 +11,7 @@ using namespace std;
 
 void MathQuizGame::startGame()
 {
-    system("cls");
+    system("clear");
 
     time_t current = time(0);
 
@@ -50,20 +51,22 @@ level:
     }
     cout << endl;
 
-    do {
-        cout << endl;
-        cout << "Would you like to play again?\nType y for yes and n for no." << endl;
-
-        cin >> ch;
-        if (ch == 'y' || ch == 'Y') {
-            // Perform any necessary tasks before starting the game again
-        } else {
-            // Clear the screen by printing newlines
-            for (int i = 0; i < 100; i++) {
-                cout << endl;
-            }
-        }
-    } while (ch == 'y' || ch == 'Y');
+   //make sure user is able to play again
+	char descision;
+	cout << "Would you like to play again? Type y for Yes and n for No" << endl;
+	cin >> descision;
+	
+	if (descision == 'y')
+	{
+	   startGame();
+   	}
+	else
+	{
+	    exit(0);
+	}
+	
+	system("clear");
+	 
 }
 
 void MathQuizGame::easyMode()
@@ -165,7 +168,7 @@ retry:
 
 void MathQuizGame::mediumMode()
 {
-        int answer[10] = {540, 3649, 132, 3015, 1176, 3960, 656, 6534, 1350, 3354};
+        int answer[10] = {480, 130, 23, 22, 86, 176, 29, 60, 268, 360};
         int userAnswer[10];
         skipCount = 0;
         ansCount = 0;
@@ -173,16 +176,16 @@ void MathQuizGame::mediumMode()
 
         string question[10] =
         {
-                "45 x 12 = ",
-                "89 x 41 = ",
-                "11 x 12 = ",
-                "67 x 45 = ",
-                "98 x 12 = ",
-                "90 x 44 = ",
-                "41 x 16 = ",
-                "66 x 99 = ",
-                "50 x 27 = ",
-                "78 x 43 = "
+                "40 x 12 = ",
+                "89 + 41 = ",
+                "11 + 12 = ",
+                "67 - 45 = ",
+                "98 - 12 = ",
+                "22 x 8 = ",
+                "145 / 5 = ",
+                "540 / 9 = ",
+                "224 + 44 = ",
+                "24 x 15 = "
         };
 
         cout << "Medium Math Quiz" << endl;
@@ -238,7 +241,7 @@ void MathQuizGame::mediumMode()
 
 void MathQuizGame::hardMode()
 {
-        int answer[10] = {67230, 373879, 18602, 281445, 116876, 397440, 59346, 644154, 145730, 325254};
+        int answer[10] = {11, 99, 25, 6, 116876, 397440, 597, 1629, 5, 864};
         int userAnswer[10];
         skipCount = 0;
         ansCount = 0;
@@ -246,20 +249,20 @@ void MathQuizGame::hardMode()
 
         string question[10] =
         {
-                "415 x 162 = ",
-                "829 x 451 = ",
-                "131 x 142 = ",
-                "647 x 435 = ",
+                "Adam has 24 pieces of candy in the night of Halloween, but 3 were just wrappers. He gave 10 pieces to his brother. How many pieces does Adam have left to eat? ",
+                "What is the derivative of 99x? ",
+                "What is the definite integral of 10x from [2,3]? ",
+                "What is the remainder of 90/7? ",
                 "958 x 122 = ",
                 "960 x 414 = ",
-                "471 x 126 = ",
-                "686 x 939 = ",
-                "590 x 247 = ",
-                "718 x 453 = "
+                "471 + 126 = ",
+                "686 + 939 = ",
+                "What is the value of x when solving the equation, 2x + 55 = 64? ",
+                "A puzzle set has 1080 pieces, How many pieces are in 80% of the puzzle set? "
         };
 
         cout << "Hard Math Quiz" << endl;
-        cout << "Instructions for this mode: Please enter an answer using the keyboard. If you want to skip a question, please enter 0. The answer for a question will never be 0." << endl;
+        cout << "Instructions for this mode: Please enter an answer using the keyboard. If you want to skip a question, please enter 0. The answer for a question will never be 0." << " Round to the nearest whole number!" << endl;
 
         playAgain:
 
