@@ -7,7 +7,7 @@
 
 using namespace std;
 
-string Wordle::getRandomWord()
+string WordleGame::getRandomWord()
 {
     string gameWord[30] = {"alpha","brief","chase","dread","earth","french","grood","hotch","ichor","jocky","known","lynch",
     "money","novel","qadis","royal","strut","taste","uhuru","venus","waded","xenon","yates","zakat","bread","ibans","icily","zaire"};
@@ -18,17 +18,17 @@ string Wordle::getRandomWord()
     return word;
 }
 
-void Wordle::toUpperCase(string &inputWord)
+void WordleGame::toUpperCase(string &inputWord)
 {
     transform(inputWord.begin(), inputWord.end(), inputWord.begin(), [] (unsigned char c)
     {return toupper(c);});
 }
-bool Wordle::isValid (string word)
+bool WordleGame::isValid (string word)
 {
     return word.length() == 5 && word.find_first_not_of("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
     == string::npos;
 }
-void Wordle::markMatch(vector <vector <int>> &matches, int tryIndex, string target, string guess)
+void WordleGame::markMatch(vector <vector <int>> &matches, int tryIndex, string target, string guess)
 {
     for(int i = 0; i < guess.length(); i++)
     {
@@ -53,7 +53,7 @@ void Wordle::markMatch(vector <vector <int>> &matches, int tryIndex, string targ
     }
 }
 
-bool Wordle::check_AllMatch(string target, string guess)
+bool WordleGame::check_AllMatch(string target, string guess)
 {
     for (int i = 0; i < guess.length(); i++)
     {
@@ -64,7 +64,7 @@ bool Wordle::check_AllMatch(string target, string guess)
     return true;
 }
 
-void Wordle::printWordle(vector<string> tries, vector <vector<int>> matches, int currTry)
+void WordleGame::printWordle(vector<string> tries, vector <vector<int>> matches, int currTry)
 {   
     printWordleMenu();
     for (int i = 0; i <= currTry && i <tries.size())
@@ -104,7 +104,7 @@ void Wordle::printWordle(vector<string> tries, vector <vector<int>> matches, int
     }
 }
 
-void Wordle::printWordleMenu()
+void WordleGame::printWordleMenu()
 {
     system("clear");
     cout << "---------------------- Welcome To Wordle! ----------------------" << endl;
@@ -112,7 +112,7 @@ void Wordle::printWordleMenu()
     + to_string(Word_Length) + ") or type Q/q to quit: " << endl;
 }
 
-void Wordle::startGame()
+void WordleGame::startGame()
 {
     int numTries = 6;
     string targetWord = getRandomWord();
