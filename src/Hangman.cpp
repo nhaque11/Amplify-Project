@@ -27,7 +27,7 @@ void HangmanGame::figureDisplay(int lives)
 	cout<< "__|__" << endl;
 }
 
-void HangmanGame::startHangman()
+void HangmanGame::startGame()
 {
     srand (time(NULL));
     string gameWords[15] = {"artist","lucky","mango","television","beach", "wedding", "vacation", 
@@ -103,7 +103,7 @@ void HangmanGame::startHangman()
 	
 	if (descision == 'y')
 	{
-	   startHangman();
+	   startGame();
    	}
 	else
 	{
