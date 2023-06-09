@@ -9,8 +9,13 @@ using namespace std;
 
 string WordleMatch::getRandomWord()
 {
-    //TODO
-    return "ready";
+    string gameWord[30] = {"alpha","brief","chase","dread","earth","french","grood","hotch","ichor","jocky","known","lynch",
+    "money","novel","qadis","royal","strut","taste","uhuru","venus","waded","xenon","yates","zakat","bread","ibans","icily","zaire"};
+
+    string word;
+    
+    word = gameWord[rand() % 30];
+    return word;
 }
 
 void WordleMatch::startWordle()
@@ -39,7 +44,7 @@ bool WordleMatch::isValid (string word)
 }
 void WordleMatch::markMatch(vector <vector <int>> &matches, int tryIndex, string target, string guess)
 {
-    //TODO
+    
 }
 bool WordleMatch::check_AllMatch(string target, string guess)
 {
