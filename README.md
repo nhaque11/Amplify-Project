@@ -60,6 +60,9 @@ This UML diagram follows the open/closed principle and interface segregation pri
  - To run the program clone this repository, and make sure to clone the google test file as well. 
  - From your root folder, run cmake. and make to build the files and executables.
  - Run the built executable and enjoy the game. 
+ - Example below for reference.
+ <img width="805" alt="Screen Shot 2023-06-09 at 1 46 34 PM" src="https://github.com/cs100/final-project-nhaqu008-jhend023-jchau044-aha053/assets/99585088/2ab74074-b014-40a6-a63f-c1d7a875a259">
+
  ## Testing
  - This project was tested through a series of various unit tests through the Google Tests Framework. We compiled and tested the Worlde, Hangman, and Math Quiz classes through a test executable where the cpp files are found through the test folder. 
  - Made sure the functions in the game runs properly without displaying anything incorrectly.
