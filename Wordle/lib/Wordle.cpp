@@ -122,14 +122,13 @@ void WordleGame::startGame()
     cout << "---------------------- Welcome To Wordle! ----------------------" << endl;
 
     while (currTry < numTries)
-    {
-        while (inputWord != "Q" && !isValid(inputWord))
+    {   do
         {
             cout << "Please enter your guess (word length must be " 
             + to_string(Word_Length) + ") or type Q to quit: " << endl;
             getline(cin,inputWord);
             toUpperCase(inputWord);
-        } 
+        } while (inputWord != "Q" && !isValid(inputWord));
 
         if (inputWord == "Q")  
         {
