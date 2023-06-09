@@ -5,7 +5,7 @@
 #include <conio.h> 
 
 
-#include "Hangman.h"
+#include "../header/Hangman.h"
 
 using namespace std;
 
