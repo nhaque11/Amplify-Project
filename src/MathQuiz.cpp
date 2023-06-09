@@ -201,7 +201,8 @@ void MathQuizGame::mediumMode()
 
         cout << "Medium Math Quiz" << endl;
         cout << "Instructions for this mode: Please enter an answer using the keyboard. If you want to skip a question, please enter 0. The answer for a question will never be 0." << endl;
-
+	cout << endl;
+	
        // playAgain:
 
                 for (int i = 0; i < 10; i++)
@@ -272,8 +273,10 @@ void MathQuizGame::hardMode()
                 "A puzzle set has 1080 pieces, How many pieces are in 80% of the puzzle set? "
         };
 
-        cout << "Hard Math Quiz" << endl;
-        cout << "Instructions for this mode: Please enter an answer using the keyboard. If you want to skip a question, please enter 0. The answer for a question will never be 0." << " Round to the nearest whole number!" << endl;
+		cout << "Hard Math Quiz" << endl;
+		cout << "Instructions for this mode: Please enter an answer using the keyboard. If you want to skip a question, please enter 0. The answer for a question will never be 0." << endl;
+		cout << "Make sure to round to the nearest whole number!" << endl;
+		cout << endl;
 
         //playAgain:
 
