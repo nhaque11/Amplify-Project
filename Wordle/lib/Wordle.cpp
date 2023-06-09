@@ -23,11 +23,13 @@ void WordleGame::toUpperCase(string &inputWord)
     transform(inputWord.begin(), inputWord.end(), inputWord.begin(), [] (unsigned char c)
     {return toupper(c);});
 }
+
 bool WordleGame::isValid (string word)
 {
-    return word.length() == 5 && word.find_first_not_of("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+    return word.length() == Word_Length && word.find_first_not_of("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
     == string::npos;
 }
+
 void WordleGame::markMatch(vector <vector <int>> &matches, int tryIndex, string target, string guess)
 {
     for(int i = 0; i < guess.length(); i++)
@@ -66,15 +68,14 @@ bool WordleGame::check_AllMatch(string target, string guess)
 
 void WordleGame::printWordle(vector<string> tries, vector <vector<int>> matches, int currTry)
 {   
-    printWordleMenu();
-    for (int i = 0; i <= currTry && i <tries.size())
+    for (int i = 0; i <= currTry && i <tries.size(); i++)
     {
-        string seperate = "-";
+        string separate = "-";
         string outLine = "|";
-        string text = " | "
-        for (int j = 0; ; j < tries[i].length(); j++)
+        string text = " | ";
+        for (int j = 0; j < tries[i].length(); j++)
         {
-            seperate += "------";
+            separate += "------";
             outLine += "     |";
             char val = toupper(tries[i][j]);
             text += "  ";
@@ -100,16 +101,8 @@ void WordleGame::printWordle(vector<string> tries, vector <vector<int>> matches,
         cout << outLine << endl;
         cout << text << endl;
         cout << outLine << endl;
-        cout << seperate << endl;
+        cout << separate << endl;
     }
-}
-
-void WordleGame::printWordleMenu()
-{
-    system("clear");
-    cout << "---------------------- Welcome To Wordle! ----------------------" << endl;
-    cout << "Please enter your guess (word length must be " 
-    + to_string(Word_Length) + ") or type Q/q to quit: " << endl;
 }
 
 void WordleGame::startGame()
@@ -122,9 +115,14 @@ void WordleGame::startGame()
     string inputWord = "";
     int currTry = 0;
 
+    system("clear");
+    cout << "---------------------- Welcome To Wordle! ----------------------" << endl;
+
     while (currTry < numTries){
         do
         {
+            cout << "Please enter your guess (word length must be " 
+            + to_string(Word_Length) + ") or type Q to quit: " << endl;
             getline(cin,inputWord);
 
         } while (inputWord != "Q" && !isValid(inputWord));
