@@ -44,6 +44,10 @@ class MockOutputStream : public ostream {
         string output;
 };
 
+TEST(HangmanGameTest, call1) {
+    EXPECT_NO_THROW(game.startGame())
+}
+
 TEST(HangmanGameTest, FigureDisplayTest0) {
     MockOutputStream mockOutputStream;
     cout.rdbuf(&mockOutputStream)
