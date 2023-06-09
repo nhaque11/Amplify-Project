@@ -15,14 +15,14 @@ int main()
 	string userInput = "no input";
 	string userName = "no username";
 
-	system("clear");
+	//system("clear");
 
 	cout << "Enter your name: " << endl;
 	cin >> userName;
 	
 	while (flag == 0)
 	{
-		system("clear");
+		//system("clear");
 		
 		cout << "Welcome to Amplify " << userName << "!" << endl << endl;
 		cout << "Game Choices:" << endl << endl;
