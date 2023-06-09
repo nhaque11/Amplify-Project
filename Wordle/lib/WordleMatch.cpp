@@ -7,6 +7,11 @@
 
 using namespace std;
 
+const int Word_Length = 5;
+const int NO_MATCH = 0;
+const int ALMOST_MATCH = 1;
+const int MATCH = 2;
+
 string WordleMatch::getRandomWord()
 {
     //TODO
@@ -15,14 +20,11 @@ string WordleMatch::getRandomWord()
 
 void WordleMatch::startWordle()
 {
-    const int Word_Length = 5;
-    const int NO_MATCH = 0;
-    const int ALMOST_MATCH = 1;
-    const int MATCH = 2;
     int numTries = 6;
+    string targetWord = getRandomWord();
+    toUpperCase(targetWord);
     vector <string> tries(numTries);
     vector <vector<int>> matches(numTries, vector<int> (Word_Length));
-    string targetWord = getRandomWord();
     string input = "";
     int currTry = 0;
 }
@@ -39,8 +41,29 @@ bool WordleMatch::isValid (string word)
 }
 void WordleMatch::markMatch(vector <vector <int>> &matches, int tryIndex, string target, string guess)
 {
-    //TODO
+    for(int i = 0; i < guess.length(); i++)
+    {
+        matches[tryIndex][i] = NO_MATCH;
+    }
+    for (int j = 0; j < guess.length(); j++)
+    {
+        for (int i = 0; i < target.length(); i++)
+        {
+            if (guess[j] == target[i])
+            {
+                if (i == j)
+                {
+                    matches[tryIndex][j] = MATCH;
+                    break;
+                }
+                else {
+                    matches[tryIndex][j] = ALMOST_MATCH;
+                }
+            }
+        }
+    }
 }
+
 bool WordleMatch::check_AllMatch(string target, string guess)
 {
     for (int i = 0; i < guess.length(); i++)
