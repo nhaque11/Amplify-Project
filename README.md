@@ -48,22 +48,18 @@ This UML diagram follows the open/closed principle and interface segregation pri
 - Open/closed principle : This principle is applied to the game object file and the minigames incorporate the virtual startGame() function directly. The use of polymorpheism of the game object function helps reduce code duplication in all games and allows for any new additional game to be added without the need of changing the base class. This principle not only allows the code to be scaleable with additional games, but also enforces abstraction behind the each game's specific internal functionality. (ie only startGame() being the main public function)
 - Interface segregation principle: This principle is applied to the Amplify project game, as each minigame gets their own interface. Simply any result played from each game should not be in the interface of the clinet main menu and/or any other game. Each game has their own interface per each user and also no minigame inherits any useless methods, fully enforcing the integration segregation princple. 
 
-
- 
- > ## Final deliverable
- > All group members will give a demo to the reader during lab time. ou should schedule your demo on Calendly with the same reader who took your second scrum meeting. The reader will check the demo and the project GitHub repository and ask a few questions to all the team members. 
- > Before the demo, you should do the following:
- > * Complete the sections below (i.e. Screenshots, Installation/Usage, Testing)
- > * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Project board.
- > * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history. 
  
  ## Screenshots
  > Screenshots of the input/output after running your application
  ## Installation/Usage
- > Instructions on installing and running your application
+ > To run the program clone this repository, and make sure to clone the google test file as well. 
+ > From your root folder, run cmake. and make to build the files and executables.
+ > Run the built executable and enjoy the game. 
  ## Testing
- > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
- > This project was validated through Google Test. Here is a screenshot of passed tests in the Wordle test suite.
+ > This project was tested through a series of various unit tests through the Google Tests Framework. We compiled and tested the Worlde, Hangman, and Math Quiz classes through a test executable where the cpp files are found through the test folder. 
+ > Made sure the functions in the game runs properly without displaying anything incorrectly.
+ > The inputs from the user are taken into account when matching it to its correlated questions.
+ > Here is a screenshot of passed tests in the Wordle test suite for example.
  <img width="1014" alt="Screenshot 2023-06-09 at 1 21 54 PM" src="https://github.com/cs100/final-project-nhaqu008-jhend023-jchau044-aha053/assets/102707406/48973b43-ebff-4566-82fa-4ead0e1c05cd">
 
  
