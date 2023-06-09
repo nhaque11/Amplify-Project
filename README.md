@@ -22,7 +22,7 @@
 
  ### Input/Output
  - Input: What the user is asked to input when choosing their profile settings, game choice, and game modes (if applicable), and gameplay
- - Output: Profile output, user gameplay (depending on which game), current/final scores
+ - Output: Profile output, user gameplay (depending on which game), user gameplay statistics
  
 
 ## User Interface Specification
