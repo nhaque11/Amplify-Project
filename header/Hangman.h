@@ -7,5 +7,8 @@ class HangmanGame
     
         void figureDisplay(int);
         void startHangman();
-        
+    
 };
+
+#endif
+
