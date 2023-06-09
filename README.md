@@ -50,7 +50,12 @@ This UML diagram follows the open/closed principle and interface segregation pri
 
  
  ## Screenshots
- > Screenshots of the input/output after running your application
+ - Screenshots of the main menu screen, Wordle gameplay, Math Quiz gameplay, and Hangman gameplay are shown below respectively.
+ <img width="801" alt="Screen Shot 2023-06-09 at 1 37 19 PM" src="https://github.com/cs100/final-project-nhaqu008-jhend023-jchau044-aha053/assets/99585088/d1b2a1b3-eb06-45f7-9e2c-a79eb83f87a7">
+ <img width="649" alt="Screen Shot 2023-06-09 at 1 38 09 PM" src="https://github.com/cs100/final-project-nhaqu008-jhend023-jchau044-aha053/assets/99585088/10c89eea-51ac-4523-9c0a-917b93096a4b">
+<img width="735" alt="Screen Shot 2023-06-09 at 1 39 04 PM" src="https://github.com/cs100/final-project-nhaqu008-jhend023-jchau044-aha053/assets/99585088/81b29a37-2c48-4680-8995-05027cc6fb0f">
+<img width="620" alt="Screen Shot 2023-06-09 at 1 39 41 PM" src="https://github.com/cs100/final-project-nhaqu008-jhend023-jchau044-aha053/assets/99585088/ddd9b294-666f-46f4-a743-b6e147f9edd1">
+
  ## Installation/Usage
  - To run the program clone this repository, and make sure to clone the google test file as well. 
  - From your root folder, run cmake. and make to build the files and executables.
