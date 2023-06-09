@@ -1,4 +1,5 @@
 #include "../include/WordleMatch.h"
+#include "../include/WordleDisplay.h"
 #include "vector"
 #include "gtest/gtest.h"
 
@@ -69,3 +70,4 @@ TEST(checkAllMatchTests, CASE)
     string GUESS = "CASE";
     EXPECT_FALSE(obj.check_AllMatch(CASE, GUESS));
 }
+
