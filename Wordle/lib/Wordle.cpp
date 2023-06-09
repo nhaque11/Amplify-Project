@@ -23,12 +23,14 @@ void WordleGame::toUpperCase(string &inputWord)
     transform(inputWord.begin(), inputWord.end(), inputWord.begin(), [] (unsigned char c)
     {return toupper(c);});
 }
-bool Wordle::isValid (string word)
+
+bool WordleGame::isValid (string word)
 {
     return word.length() == Word_Length && word.find_first_not_of("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
     == string::npos;
 }
-void Wordle::markMatch(vector <vector <int>> &matches, int tryIndex, string target, string guess)
+
+void WordleGame::markMatch(vector <vector <int>> &matches, int tryIndex, string target, string guess)
 {
     for(int i = 0; i < guess.length(); i++)
     {
@@ -53,7 +55,7 @@ void Wordle::markMatch(vector <vector <int>> &matches, int tryIndex, string targ
     }
 }
 
-bool Wordle::check_AllMatch(string target, string guess)
+bool WordleGame::check_AllMatch(string target, string guess)
 {
     for (int i = 0; i < guess.length(); i++)
     {
@@ -64,7 +66,7 @@ bool Wordle::check_AllMatch(string target, string guess)
     return true;
 }
 
-void Wordle::printWordle(vector<string> tries, vector <vector<int>> matches, int currTry)
+void WordleGame::printWordle(vector<string> tries, vector <vector<int>> matches, int currTry)
 {   
     for (int i = 0; i <= currTry && i <tries.size(); i++)
     {
@@ -103,7 +105,7 @@ void Wordle::printWordle(vector<string> tries, vector <vector<int>> matches, int
     }
 }
 
-void Wordle::startGame()
+void WordleGame::startGame()
 {
     int numTries = 6;
     string targetWord = getRandomWord();
@@ -143,11 +145,4 @@ void Wordle::startGame()
     {
         cout << "You did not find the word! The word was " << targetWord << "." << endl;
     }
-}
-
-int main(){
-    Wordle obj;
-    obj.startGame();
-    
-    return 0;
 }
