@@ -34,13 +34,18 @@ void WordleGame::markMatch(vector <vector <int>> &matches, int tryIndex, string 
 {
     for(int i = 0; i < guess.length(); i++)
     {
+        cout << "Mark match function called" << endl;
+        cout << target << endl;
+        cout << guess << endl;
         matches[tryIndex][i] = NO_MATCH;
     }
     for (int j = 0; j < guess.length(); j++)
     {
+        cout << guess[j] << endl;
+        cout << target[j] << endl;
         for (int i = 0; i < target.length(); i++)
         {
-            if (guess[j] == target[i])
+            if (guess[j] == target[i])  
             {
                 if (i == j)
                 {
@@ -68,26 +73,29 @@ bool WordleGame::check_AllMatch(string target, string guess)
 
 void WordleGame::printWordle(vector<string> tries, vector <vector<int>> matches, int currTry)
 {   
-    for (int i = 0; i <= currTry && i <tries.size(); i++)
+    for (int i = 0; i <= currTry && i < tries.size(); i++)
     {
         string separate = "-";
         string outLine = "|";
-        string text = " | ";
+        string text = "|";
         for (int j = 0; j < tries[i].length(); j++)
         {
             separate += "------";
             outLine += "     |";
             char val = toupper(tries[i][j]);
             text += "  ";
+            cout << matches[i][j] << endl;
             if (matches[i][j] == ALMOST_MATCH)
             {
                 text += "\033[33m";
             }
-            else if (matches[i][j])
+            else if (matches[i][j] == MATCH)
             {
                 text += "\033[32m";
             }
+
             text += val;
+
             if (matches[i][j] == ALMOST_MATCH || matches[i][j] == MATCH)
             {
                 text += "\033[0m";
@@ -107,7 +115,7 @@ void WordleGame::printWordle(vector<string> tries, vector <vector<int>> matches,
 
 void WordleGame::startGame()
 {
-    int numTries = 6;
+    const int numTries = 6;
     string targetWord = getRandomWord();
     toUpperCase(targetWord);
     vector <string> tries(numTries);
@@ -118,13 +126,14 @@ void WordleGame::startGame()
     system("clear");
     cout << "---------------------- Welcome To Wordle! ----------------------" << endl;
 
-    while (currTry < numTries){
+    while (currTry < numTries)
+    {
         do
         {
             cout << "Please enter your guess (word length must be " 
             + to_string(Word_Length) + ") or type Q to quit: " << endl;
             getline(cin,inputWord);
-
+            toUpperCase(inputWord);
         } while (inputWord != "Q" && !isValid(inputWord));
 
         if (inputWord == "Q")
@@ -132,17 +141,27 @@ void WordleGame::startGame()
             cout << "Quit Game" << endl;
             break;
         }
+        else 
+        {
         tries[currTry] = inputWord;
         currTry++;
+        }
     }
     markMatch(matches, currTry, targetWord, inputWord);
-    printWordle(tries, matches, currTry);
+    printWordle(tries, matches, currTry - 1);
     if (check_AllMatch(targetWord, inputWord))
     {
         cout << "You found the word! Congragulations!" << endl;
     }
-    else if (currTry == numTries)
+    else
     {
         cout << "You did not find the word! The word was " << targetWord << "." << endl;
     }
+}
+
+int main(){
+    WordleGame obj;
+    obj.startGame();
+    
+    return 0;
 }
