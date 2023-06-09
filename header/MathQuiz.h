@@ -1,6 +1,8 @@
 #ifndef __MATHQUIZ_H__
 #define __MATHQUIZ_H__
 
+#include "../Game/Game.h"
+
 class MathQuizGame : public Game
 {
 	public:

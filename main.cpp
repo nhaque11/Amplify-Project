@@ -12,7 +12,7 @@ using namespace std;
 int main()
 {
 	int flag = 0;
-	int userInput = 0;
+	string userInput = "no input";
 	string userName = "no username";
 	
 	cout << "Enter your name: " << endl;
@@ -22,7 +22,7 @@ int main()
 	{
 		system("clear");
 		
-		cout << "Welcome to Amplify " << userName << " !" << endl << endl;
+		cout << "Welcome to Amplify " << userName << "!" << endl << endl;
 		cout << "Game Choices:" << endl << endl;
 		cout << "1. Wordle" << endl;
 		cout << "2. Math Quiz" << endl;
@@ -30,30 +30,30 @@ int main()
 		cout << "4. Quit" << endl << endl << endl;
 		cout << "Type the number of the option you would like to choose, followed by the enter key: ";
 		cin >> userInput;
-		
+
 		flag = 1;
 
 		while (flag == 1)
 		{
-			if (userInput == 1)
+			if (userInput == "1")
 			{
 				WordleGame wordle;
 				wordle.startGame();
 				flag = 0;
 			}
-			else if (userInput == 2)
+			else if (userInput == "2")
 			{
 				MathQuizGame mathquiz;
 				mathquiz.startGame();
 				flag = 0;
 			}
-			else if (userInput == 3)
+			else if (userInput == "3")
 			{
 				HangmanGame hangman;
 				hangman.startGame();
 				flag = 0;
 			}
-			else if (userInput == 4)
+			else if (userInput == "4")
 			{
 				exit(1);
 			}
@@ -64,6 +64,6 @@ int main()
 			}
 		}
 	}
-
+	
 	return 0;
 }
