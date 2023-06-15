@@ -22,7 +22,7 @@
 
  ### Input/Output
  - Input: What the user is asked to input when choosing their profile settings, game choice, and game modes (if applicable), and gameplay
- - Output: Profile output, user gameplay (depending on which game), user gameplay statistics
+ - Output: Profile output, current time and date before game begins, user gameplay (depending on which game), user gameplay statistics
  
 
 ## User Interface Specification
@@ -42,25 +42,34 @@ This navigation diagram allows the user to understand where the program begins a
 
 ## Class Diagram
 The class diagram is centered around our game object. The three games (Wordle, Hang Man, and Math Quiz) will be derived from this game object and the menu will be projected from one main.cpp. The games are derived from the game object because all the games have a name and will have a saved high score. Each game derived class has its own set of private variables and functions necessary to develop the game without needing to develop the other games simultaneously. All .cpp and .h files will be compilled through a CMakeLists.txt and be run by one single executable, through the console (all games are terminal based).
-![UML Class Diagram CS 100](https://github.com/cs100/final-project-nhaqu008-jhend023-jchau044-aha053/assets/102707406/2db11070-759b-45e9-8a5c-816bc21d96a6.png)
-This UML diagram follows the open/closed principle and single responsibility principles.
-- Open/closed principle : This principle is applied to the game object file and the minigames incorporate those base features through inheritance. This allows for any new additional game to be added without changing the base class. This principle is benificial to us and helps to write better code. For example, when you edit game functions or need to add a new game there is no need to do meitculoius changes that could affect the other games that are incorporated. 
-- Single respoonsibility principle: This principle is applied to the Wordle game as the many functions are split into two smaller classes each with their own responsibility. This change helped to make the code more manageable and more approachable as you know which functions will need to be done in order to complete an entire feature rather than completing the entire game itself. By keeping this principle in mind, any possible mini-game feature or addition can be designed in a manageable way.
+<img width="823" alt="SOLIDSuml" src="https://github.com/cs100/final-project-nhaqu008-jhend023-jchau044-aha053/assets/102707406/4fcc59fa-cbd7-4ab5-9999-34867c5b8210">
 
+This UML diagram follows the open/closed principle and interface segregation principle.
+- Open/closed principle : This principle is applied to the game object file and the minigames incorporate the virtual startGame() function directly. The use of polymorpheism of the game object function helps reduce code duplication in all games and allows for any new additional game to be added without the need of changing the base class. This principle not only allows the code to be scaleable with additional games, but also enforces abstraction behind the each game's specific internal functionality. (ie only startGame() being the main public function)
+- Interface segregation principle: This principle is applied to the Amplify project game, as each minigame gets their own interface. Simply any result played from each game should not be in the interface of the client main menu and/or any other game. Each game has their own interface per each user and also no minigame inherits any useless methods, fully enforcing the integration segregation princple. 
 
- 
- > ## Final deliverable
- > All group members will give a demo to the reader during lab time. ou should schedule your demo on Calendly with the same reader who took your second scrum meeting. The reader will check the demo and the project GitHub repository and ask a few questions to all the team members. 
- > Before the demo, you should do the following:
- > * Complete the sections below (i.e. Screenshots, Installation/Usage, Testing)
- > * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Project board.
- > * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history. 
  
  ## Screenshots
- > Screenshots of the input/output after running your application
+ - Screenshots of the main menu screen, Wordle gameplay, Math Quiz gameplay, and Hangman gameplay are shown below respectively.
+ <img width="801" alt="Screen Shot 2023-06-09 at 1 37 19 PM" src="https://github.com/cs100/final-project-nhaqu008-jhend023-jchau044-aha053/assets/99585088/d1b2a1b3-eb06-45f7-9e2c-a79eb83f87a7">
+ <img width="649" alt="Screen Shot 2023-06-09 at 1 38 09 PM" src="https://github.com/cs100/final-project-nhaqu008-jhend023-jchau044-aha053/assets/99585088/10c89eea-51ac-4523-9c0a-917b93096a4b">
+<img width="735" alt="Screen Shot 2023-06-09 at 1 39 04 PM" src="https://github.com/cs100/final-project-nhaqu008-jhend023-jchau044-aha053/assets/99585088/81b29a37-2c48-4680-8995-05027cc6fb0f">
+<img width="620" alt="Screen Shot 2023-06-09 at 1 39 41 PM" src="https://github.com/cs100/final-project-nhaqu008-jhend023-jchau044-aha053/assets/99585088/ddd9b294-666f-46f4-a743-b6e147f9edd1">
+
  ## Installation/Usage
- > Instructions on installing and running your application
+ - To run the program clone this repository, and make sure to clone the google test file as well. 
+ - From your root folder, run cmake. and make, to build the files and executables.
+ - Run the built executable and enjoy the game. 
+ - Example below for reference.
+ <img width="805" alt="Screen Shot 2023-06-09 at 1 46 34 PM" src="https://github.com/cs100/final-project-nhaqu008-jhend023-jchau044-aha053/assets/99585088/2ab74074-b014-40a6-a63f-c1d7a875a259">
+
  ## Testing
- > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
- 
+ - This project was tested through a series of various unit tests through the Google Tests Framework. We compiled and tested the Worlde, Hangman, and Math Quiz classes through a test executable where the cpp files are found through the test folder. Valgrind was also run to make sure there are no memory leaks or errors with other variables. 
+ - Made sure the functions in the game runs properly without displaying anything incorrectly.
+ - The inputs from the user are taken into account when matching it to its correlated questions.
+ - Here is the screenshot of the Valgrind executable being run.
+![valgrindtest](https://github.com/cs100/final-project-nhaqu008-jhend023-jchau044-aha053/assets/99585088/9a69c32b-36b9-4790-851d-a3a4fcd3fb5d)
+ - Here is a screenshot of passed tests in the Wordle test suite for example.
+ <img width="1014" alt="Screenshot 2023-06-09 at 1 21 54 PM" src="https://github.com/cs100/final-project-nhaqu008-jhend023-jchau044-aha053/assets/102707406/48973b43-ebff-4566-82fa-4ead0e1c05cd">
+
  

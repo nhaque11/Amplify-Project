@@ -45,7 +45,7 @@ void HangmanGame::startGame()
 	
     while(lives >= 0)
     {
-		system("clear");
+		//system("clear");
 		 
 		for(int i=0; i < word.length(); i++)
         {
@@ -119,6 +119,6 @@ void HangmanGame::startGame()
 		}
 	}
 
-	system("clear");
+	//system("clear");
 }
 

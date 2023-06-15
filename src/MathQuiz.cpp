@@ -10,7 +10,7 @@ using namespace std;
 
 void MathQuizGame::startGame()
 {
-	system("clear");
+	//system("clear");
 	time_t current = time(0);
 	char *display = ctime(&current);
 	
@@ -70,7 +70,7 @@ void MathQuizGame::startGame()
 		else if (decision == "n")
 		{
 			flag = 0;
-			system("clear");
+			//system("clear");
 		}
 		else
 		{
@@ -201,9 +201,9 @@ void MathQuizGame::mediumMode()
 
         cout << "Medium Math Quiz" << endl;
         cout << "Instructions for this mode: Please enter an answer using the keyboard. If you want to skip a question, please enter 0. The answer for a question will never be 0." << endl;
-        cout << endl;
-        
-        //playAgain:
+	cout << endl;
+	
+       // playAgain:
 
                 for (int i = 0; i < 10; i++)
                 {
@@ -247,7 +247,7 @@ void MathQuizGame::mediumMode()
                         cout << "You got " << correctAnswer << " correct." << endl;
                         cout << "You missed " << (10 - correctAnswer - skipCount) << " questions." << endl;
                         cout << "You skipped " << skipCount << " questions." << endl;
-                       // goto playAgain;
+                        //goto playAgain;
                 }
 }
 
@@ -273,10 +273,10 @@ void MathQuizGame::hardMode()
                 "A puzzle set has 1080 pieces, How many pieces are in 80% of the puzzle set? "
         };
 
-        cout << "Hard Math Quiz" << endl;
-        cout << "Instructions for this mode: Please enter an answer using the keyboard. If you want to skip a question, please enter 0. The answer for a question will never be 0." << endl;
-        cout << "Make sure to round to the nearest whole number!" << endl;
-        cout << endl;
+		cout << "Hard Math Quiz" << endl;
+		cout << "Instructions for this mode: Please enter an answer using the keyboard. If you want to skip a question, please enter 0. The answer for a question will never be 0." << endl;
+		cout << "Make sure to round to the nearest whole number!" << endl;
+		cout << endl;
 
         //playAgain:
 
