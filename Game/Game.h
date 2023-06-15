@@ -6,13 +6,10 @@
 
 using namespace std;
 
-class Game  {
-    public:
-        string Game(name);
-        string getName();
-        void play();
-    
-    private:
-        string name;
-        int highScore = 0;
-}
+class Game
+{
+	public:
+		virtual void startGame() = 0;
+};
+
+#endif
