@@ -3,12 +3,11 @@
 
 #include <iostream>
 #include <vector>
-
 #include "../../Game/Game.h"
 
 using namespace std;
 
-class WordleGame : public Game
+class WordleGame: public Game
 {
 	public:
 		void startGame();
