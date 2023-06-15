@@ -89,7 +89,6 @@ void MathQuizGame::easyMode()
 // Assign values to the question array using a loop
     for (int i = 0; i < 8; i++) 
     {
-        switch (i) 
         {
             case 0:
                 question[i] = "Question 1) 5x4=___?";
