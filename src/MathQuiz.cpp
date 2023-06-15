@@ -173,6 +173,8 @@ void MathQuizGame::easyMode()
         cout << userName << " gave " << (8 - correctAnswer - skipCount) << " wrong answers." << endl;
         cout << userName << " skipped " << skipCount << " questions." << endl;
 
+    cin >> ch;
+     if (ch == 'y' || ch == 'Y')
         //goto retry;
     }
 }
