@@ -6,28 +6,31 @@
  [Naquib Haque](https://github.com/nhaqu008), [Jarod Hendrickson](https://github.com/jhend023), [Jason Chau](https://github.com/jchau044), [Alex Ha](https://github.com/aha053)
 
 ## Project Description
- - The project is interesting to us because each one of us has played mini-games and apps on our phones that have at some point improved our critical thinking skills and our project will be the perfect opportunity to help people to practice and have fun while learning for an individual or even as a group. 
+ - The project is interesting to us because each one of us has played mini-games and apps on our phones that have at some point enhanced our critical thinking skills and our project is the perfect opportunity to practice and have fun improving our thinking skills whether it is as an individual or with a group. 
  
   ### Features    
-  - For our group project, we have decided to develop a text/terminal based game that supports about 2-3 minigames for users to choose between. The games will include a guess the word option (ie wordle) that asks the user to guess the word within 6 tries and with proper (green, yellow, grey coloring) , a math game restricted to a set range of numbers (randomly generated) which allows users to choose between various modes that is (maybe timed) and keeps tab of score (highest score too) plus other pending features (start button), and if time allows, another minigame (pending idea). 
+  - For our group project, we have decided to develop a text/terminal based brain game that supports 3 minigames for users to choose between and play. The games will include a guess the word option (ie wordle) that asks the user to guess the word within 6 tries and with proper (green, yellow, grey coloring), a math game restricted to a set range of questions that are randomly chosen for a user to answer, giving users to choose between various difficulties and keeping tab of game statistics, and lastly a game of Hangman restricted to a set range of questions that are also randonmly chosen, which displays a stickfigure based on attempts remaining and a row of letters that the user has already used.
 
   ### Tech Stack
- - C++ (as of right now)
+ - C++ 
  - Visual Studio Code
  - Git/Github
  - Valgrind
  - Google Test Framework
  - Lucidchart
+ - CMake
 
  ### Input/Output
  - Input: What the user is asked to input when choosing their profile settings, game choice, and game modes (if applicable), and gameplay
- - Output: Profile output, user gameplay (depending on which game), current/final scores, other pending features. 
+ - Output: Profile output, current time and date before game begins, user gameplay (depending on which game), user gameplay statistics
  
 
 ## User Interface Specification
  
 ### Navigation Diagram
-![CS 100 - Final Project Nav Diagram](https://user-images.githubusercontent.com/99585088/236991915-a68dfd80-3e6c-4403-952f-a6c3edc0ded8.png)
+![CS 100 - Final Project Nav  Diagram](https://github.com/cs100/final-project-nhaqu008-jhend023-jchau044-aha053/assets/99585088/885b8321-4082-407a-ad8d-6019a59be9bb)
+
+This navigation diagram allows the user to understand where the program begins and the process that leads to the end. The user starts with the main menu screen where they are able to choose between four options, three leading to a game, while the last terminates the program. The user then is prompted to the chosen options screen which then leads to the gameplay of that option and eventually the user is given the option to exit the game and enter the main menu screen once again. 
 
 
 ### Screen Layouts
@@ -39,43 +42,34 @@
 
 ## Class Diagram
 The class diagram is centered around our game object. The three games (Wordle, Hang Man, and Math Quiz) will be derived from this game object and the menu will be projected from one main.cpp. The games are derived from the game object because all the games have a name and will have a saved high score. Each game derived class has its own set of private variables and functions necessary to develop the game without needing to develop the other games simultaneously. All .cpp and .h files will be compilled through a CMakeLists.txt and be run by one single executable, through the console (all games are terminal based).
-![UML Class Diagram CS 100](https://user-images.githubusercontent.com/102707406/236993478-f6f3112c-4710-4684-bafb-2e4476b82ba6.png)
+<img width="823" alt="SOLIDSuml" src="https://github.com/cs100/final-project-nhaqu008-jhend023-jchau044-aha053/assets/102707406/4fcc59fa-cbd7-4ab5-9999-34867c5b8210">
 
+This UML diagram follows the open/closed principle and interface segregation principle.
+- Open/closed principle : This principle is applied to the game object file and the minigames incorporate the virtual startGame() function directly. The use of polymorpheism of the game object function helps reduce code duplication in all games and allows for any new additional game to be added without the need of changing the base class. This principle not only allows the code to be scaleable with additional games, but also enforces abstraction behind the each game's specific internal functionality. (ie only startGame() being the main public function)
+- Interface segregation principle: This principle is applied to the Amplify project game, as each minigame gets their own interface. Simply any result played from each game should not be in the interface of the client main menu and/or any other game. Each game has their own interface per each user and also no minigame inherits any useless methods, fully enforcing the integration segregation princple. 
 
-
- > ## Phase III
- > You will need to schedule a check-in for the second scrum meeting with the same reader you had your first scrum meeting with (using Calendly). Your entire team must be present. This meeting will occur on week 8 during lab time.
- 
- > BEFORE the meeting you should do the following:
- > * Update your class diagram from Phase II to include any feedback you received from your TA/grader.
- > * Considering the SOLID design principles, reflect back on your class diagram and think about how you can use the SOLID principles to improve your design. You should then update the README.md file by adding the following:
- >   * A new class diagram incorporating your changes after considering the SOLID principles.
- >   * For each update in your class diagram, you must explain in 3-4 sentences:
- >     * What SOLID principle(s) did you apply?
- >     * How did you apply it? i.e. describe the change.
- >     * How did this change help you write better code?
- > * Perform a new sprint plan like you did in Phase II.
- > * You should also make sure that your README file (and Project board) are up-to-date reflecting the current status of your project and the most recent class diagram. Previous versions of the README file should still be visible through your commit history.
- 
-> During the meeting with your reader you will discuss: 
- > * How effective your last sprint was (each member should talk about what they did)
- > * Any tasks that did not get completed last sprint, and how you took them into consideration for this sprint
- > * Any bugs you've identified and created issues for during the sprint. Do you plan on fixing them in the next sprint or are they lower priority?
- > * What tasks you are planning for this next sprint.
-
- 
- > ## Final deliverable
- > All group members will give a demo to the reader during lab time. ou should schedule your demo on Calendly with the same reader who took your second scrum meeting. The reader will check the demo and the project GitHub repository and ask a few questions to all the team members. 
- > Before the demo, you should do the following:
- > * Complete the sections below (i.e. Screenshots, Installation/Usage, Testing)
- > * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Project board.
- > * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history. 
  
  ## Screenshots
- > Screenshots of the input/output after running your application
+ - Screenshots of the main menu screen, Wordle gameplay, Math Quiz gameplay, and Hangman gameplay are shown below respectively.
+ <img width="801" alt="Screen Shot 2023-06-09 at 1 37 19 PM" src="https://github.com/cs100/final-project-nhaqu008-jhend023-jchau044-aha053/assets/99585088/d1b2a1b3-eb06-45f7-9e2c-a79eb83f87a7">
+ <img width="649" alt="Screen Shot 2023-06-09 at 1 38 09 PM" src="https://github.com/cs100/final-project-nhaqu008-jhend023-jchau044-aha053/assets/99585088/10c89eea-51ac-4523-9c0a-917b93096a4b">
+<img width="735" alt="Screen Shot 2023-06-09 at 1 39 04 PM" src="https://github.com/cs100/final-project-nhaqu008-jhend023-jchau044-aha053/assets/99585088/81b29a37-2c48-4680-8995-05027cc6fb0f">
+<img width="620" alt="Screen Shot 2023-06-09 at 1 39 41 PM" src="https://github.com/cs100/final-project-nhaqu008-jhend023-jchau044-aha053/assets/99585088/ddd9b294-666f-46f4-a743-b6e147f9edd1">
+
  ## Installation/Usage
- > Instructions on installing and running your application
+ - To run the program clone this repository, and make sure to clone the google test file as well. 
+ - From your root folder, run cmake. and make, to build the files and executables.
+ - Run the built executable and enjoy the game. 
+ - Example below for reference.
+ <img width="805" alt="Screen Shot 2023-06-09 at 1 46 34 PM" src="https://github.com/cs100/final-project-nhaqu008-jhend023-jchau044-aha053/assets/99585088/2ab74074-b014-40a6-a63f-c1d7a875a259">
+
  ## Testing
- > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
- 
+ - This project was tested through a series of various unit tests through the Google Tests Framework. We compiled and tested the Worlde, Hangman, and Math Quiz classes through a test executable where the cpp files are found through the test folder. Valgrind was also run to make sure there are no memory leaks or errors with other variables. 
+ - Made sure the functions in the game runs properly without displaying anything incorrectly.
+ - The inputs from the user are taken into account when matching it to its correlated questions.
+ - Here is the screenshot of the Valgrind executable being run.
+![valgrindtest](https://github.com/cs100/final-project-nhaqu008-jhend023-jchau044-aha053/assets/99585088/9a69c32b-36b9-4790-851d-a3a4fcd3fb5d)
+ - Here is a screenshot of passed tests in the Wordle test suite for example.
+ <img width="1014" alt="Screenshot 2023-06-09 at 1 21 54 PM" src="https://github.com/cs100/final-project-nhaqu008-jhend023-jchau044-aha053/assets/102707406/48973b43-ebff-4566-82fa-4ead0e1c05cd">
+
  

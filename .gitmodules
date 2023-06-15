@@ -1,0 +1,6 @@
+[submodule "googletest"]
+	path = googletest
+	url = https://github.com/google/googletest.git
+[submodule "Wordle/test/googletest"]
+	path = Wordle/test/googletest
+	url = https://github.com/google/googletest.git
